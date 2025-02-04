@@ -1,4 +1,6 @@
+"""
 
+"""
 from typing import List
 
 from results.model.appeal import MedicalInsuranceAppeal

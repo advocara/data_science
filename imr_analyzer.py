@@ -10,7 +10,7 @@ from openai import OpenAI
 
 from cache import FileCache  # Update import
 from results.model.appeal import IMRRow, MedicalInsuranceAppeal
-from util import get_openai_client
+from util import get_openai_client, load_openai_key
 
 MAX_CASES = 20
 CHUNK_SIZE = 4
@@ -83,6 +83,7 @@ class IMRAnalyzer:
         cached_result = self.cache.get(full_text, dataset_name)
         if cached_result:
             try:
+                print(f"Cache hit for {full_text[:200]}")
                 return json.loads(cached_result)
             except json.JSONDecodeError:
                 print("Cache format is invalid. Clear or fix incompatible cache JSON and re-run")
@@ -95,22 +96,25 @@ class IMRAnalyzer:
         Case:
         {imr.to_string()}
         """
-        
-        response = openai.beta.chat.completions.parse(
+        client = openai.OpenAI(api_key=load_openai_key())
+        response = client.beta.chat.completions.parse(
             model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
             response_format=MedicalInsuranceAppeal,
             temperature=0.0,
         )
         
-        result = response.choices[0].message.parsed
-        if result is None:
+        mia = response.choices[0].message.parsed
+        if mia is None:
             raise ValueError("No object returned from OpenAI")
             
+        assert isinstance(mia, MedicalInsuranceAppeal)
         # Cache the successful result as the object JSON form
-        self.cache.put(full_text, json.dumps(result), dataset_name)
-            
-        return result
+        self.cache.put(full_text, mia.model_dump_json(), dataset_name)
+
+        print(f"Extracted and cached case {mia.case_id}")
+
+        return mia
             # Create normalization mappings using LLM
     
     

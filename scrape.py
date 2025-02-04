@@ -1,9 +1,9 @@
 import os
 from typing import List, Dict
 from cache import FileCache
-from imr_analyzer import IMRAnalyzer, IMRQuery, load_openai_key
+from imr_analyzer import IMRAnalyzer, IMRQuery
 from results.model.appeal import MedicalInsuranceAppeal
-
+from util import load_openai_key
 
 def create_theme_instructions() -> str:
     """Create focused instructions for actionable theme extraction"""
@@ -44,7 +44,7 @@ def main():
     # Configure parameters
     input_csv = "data/ca-imr-determinations.csv"
     start_record = 0  # Start from first record
-    max_records = 50  # Process lmit of records
+    max_records = 5  # Process lmit of records
     chunk_size = 4    # Process in chunks of 4
     
     # Load OpenAI API key
@@ -81,7 +81,7 @@ def main():
         appeal = analyzer.extract_appeal(match, create_theme_instructions(), dataset_name)
         results.append(appeal)
 
-        
+
 
 if __name__ == "__main__":
     main()
