@@ -8,8 +8,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 
-from random_forest_paths import extract_multi_feature_paths
-def preprocess_data(records):
+from random_forest_paths import extract_multi_feature_paths, analyze_feature_impact, format_impact_analysis
+from results.model.appeal import MedicalInsuranceAppeal
+from term_normalizer import Normalizer
+
+def appeals_as_dataframe_onehot(records):
     """Convert JSON-based medical appeal records into a structured DataFrame."""
     df = pd.DataFrame(records)
     
@@ -48,25 +51,13 @@ def preprocess_data(records):
     categorical_cols = ["gender", "age_range", "disease", "treatment_category", "treatment_subcategory"]
     df = pd.get_dummies(df, columns=categorical_cols, dtype=int)
     
-    # Drop original JSON columns
+    # Drop original JSON columns now that we have extracted the data to one-hot encoded columns
     df = df.drop(columns=["patient_info", "diagnosis", "secondary_conditions", "complications", "symptoms", 
                           "treatments_requested", "treatments_tried_but_failed", "treatments_tried_and_worked", 
                           "treatments_not_tried", "issues_considered", "guidelines_details", "soc_details", "study_details", 
                           "key_questions", "rationale", "reviewer_credentials", "case_id"], errors="ignore")
     
     return df
-
-# Load data
-# Load JSON files from cache directory
-medical_appeals = []
-cache_dir = "cache"
-
-# Read all JSON files in cache directory
-for json_file in glob.glob(os.path.join(cache_dir, "*.json")):
-    with open(json_file, 'r') as f:
-        medical_appeals.append(json.load(f))
-
-print(f"Loaded {len(medical_appeals)} medical appeal records")
 
 
 def train_random_forest(X, y):
@@ -89,10 +80,26 @@ def train_random_forest(X, y):
     
     return clf, X_train, X_test, y_train, y_test
 
-# Preprocess data
-df = preprocess_data(medical_appeals)
 
-# Prepare features and target
+# Load JSON files from cache directory
+medical_appeals = []
+cache_dir = "cache"
+
+# Read all JSON files in cache directory
+for json_file in glob.glob(os.path.join(cache_dir, "*.json")):
+    with open(json_file, 'r') as f:
+        medical_appeals.append(MedicalInsuranceAppeal.model_validate(json.load(f)))
+
+print(f"Loaded {len(medical_appeals)} medical appeal records")
+
+#### Normalize the appeals so the string terms are the same for similar treatments, etc. ####
+Normalizer().normalize_names(medical_appeals)
+
+#### Convert to a dataframe with categories flattened as one-hot encoded columns ####
+medical_appeal_dicts = [appeal.model_dump() for appeal in medical_appeals]
+df = appeals_as_dataframe_onehot(medical_appeal_dicts) # convert back to dict now that name normalization is done
+
+#### Prepare features and target ####
 X = df.drop(columns=["is_denial_upheld"])
 y = df["is_denial_upheld"]
 
@@ -111,11 +118,15 @@ feature_importances = model.feature_importances_
 #### ======
 
 # **Use our path counting module for Feature Path Analysis**
-print("\n--- Most Common Multi-Feature Decision Paths ---")
-top_paths = extract_multi_feature_paths(model, X, min_occurrences=2, max_path_length=4)
-for path, count in top_paths.items():
-    path_str = " + ".join(path)  # Convert tuple to readable format
-    print(f"{path_str} (Appeared {count} times)")
+print("\n=== Feature Impact Analysis ===")
+impact_metrics = analyze_feature_impact(model, X, min_occurrences=5, max_path_length=3)
+results = format_impact_analysis(impact_metrics, top_n=20)
+
+print("\nMost Impactful Feature Combinations:")
+print("------------------------------------")
+for result in results:
+    print(result)
+    print("------------------------------------")
 
 
 # print("\n--- Most Common Multi-Feature Pathways ---")
