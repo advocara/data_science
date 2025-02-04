@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 
-
+from random_forest_paths import extract_multi_feature_paths
 def preprocess_data(records):
     """Convert JSON-based medical appeal records into a structured DataFrame."""
     df = pd.DataFrame(records)
@@ -21,11 +21,17 @@ def preprocess_data(records):
     df["treatment_subcategory"] = df["treatment_subcategory"] # NOOP
     df["is_denial_upheld"] = df["is_denial_upheld"].astype(int)  # Target variable
     
-    # Encode support flags (binary)
-    df["guidelines_support"] = df["guidelines_support"].fillna(False).astype(int)
-    df["guidelines_not_support"] = df["guidelines_not_support"].fillna(False).astype(int)
-    df["soc_support"] = df["soc_support"].fillna(False).astype(int)
-    df["soc_not_support"] = df["soc_not_support"].fillna(False).astype(int)
+    # Encode support flags (binary) - be explicit about handling None values
+    boolean_columns = [
+        "guidelines_support",
+        "guidelines_not_support", 
+        "soc_support",
+        "soc_not_support"
+    ]
+    
+    for col in boolean_columns:
+        # Convert None to False and ensure boolean type
+        df[col] = df[col].map({True: 1, False: 0, None: 0}).astype(int)
 
     # Encode treatments (one-hot encoding for dynamic values)
     def encode_treatments(col_name):
@@ -63,22 +69,59 @@ for json_file in glob.glob(os.path.join(cache_dir, "*.json")):
 print(f"Loaded {len(medical_appeals)} medical appeal records")
 
 
+def train_random_forest(X, y):
+    """
+    Train a Random Forest model on the given data.
+    
+    Args:
+        X: Feature DataFrame
+        y: Target variable Series
+    
+    Returns:
+        tuple: Trained model, X_train, X_test, y_train, y_test
+    """
+    # Split into train-test sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    # Train RandomForest model
+    clf = RandomForestClassifier(n_estimators=100, random_state=42)
+    clf.fit(X_train, y_train)
+    
+    return clf, X_train, X_test, y_train, y_test
+
 # Preprocess data
 df = preprocess_data(medical_appeals)
 
-# Split into train-test sets
+# Prepare features and target
 X = df.drop(columns=["is_denial_upheld"])
 y = df["is_denial_upheld"]
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train RandomForest model
-clf = RandomForestClassifier(n_estimators=100, random_state=42)
-clf.fit(X_train, y_train)
+# Train model
+model, X_train, X_test, y_train, y_test = train_random_forest(X, y)
 
 # Feature Importance
-feature_importances = clf.feature_importances_
-plt.barh(X.columns, feature_importances)
-plt.xlabel("Feature Importance")
-plt.ylabel("Feature")
-plt.title("Random Forest Feature Importance in Medical Appeals Prediction")
-plt.show()
+feature_importances = model.feature_importances_
+# plt.barh(X.columns, feature_importances)
+# plt.xlabel("Feature Importance")
+# plt.ylabel("Feature")
+# plt.title("Random Forest Feature Importance in Medical Appeals Prediction")
+# plt.show()
+
+
+#### ======
+
+# **Use our path counting module for Feature Path Analysis**
+print("\n--- Most Common Multi-Feature Decision Paths ---")
+top_paths = extract_multi_feature_paths(model, X, min_occurrences=2, max_path_length=4)
+for path, count in top_paths.items():
+    path_str = " + ".join(path)  # Convert tuple to readable format
+    print(f"{path_str} (Appeared {count} times)")
+
+
+# print("\n--- Most Common Multi-Feature Pathways ---")
+# common_combinations = random_forests_paths.extract_feature_combinations(model, X.columns)
+# for features, count in common_combinations.items():
+#     print(f"{features} (Appeared {count} times)")
+
+# # **Visualize a Sample Decision Tree**
+# random_forests_paths.visualize_decision_tree(model, X.columns, max_depth=3)

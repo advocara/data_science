@@ -1,0 +1,92 @@
+{
+    "case_id": "EI23-39661",
+    "year": 2023,
+    "patient_info": {
+        "age_range": "41 to 50",
+        "gender": "Female"
+    },
+    "diagnosis": "Lupus",
+    "secondary_conditions": [
+        "Hypogammaglobulinemia",
+        "Lupus Nephritis"
+    ],
+    "complications": [
+        "Proteinuria",
+        "Recurrent Infections"
+    ],
+    "symptoms": [
+        "Candidiasis",
+        "Bacteremia",
+        "Cytomegalovirus (CMV)"
+    ],
+    "treatment_category": "Pharmacy",
+    "treatment_subcategory": "IVIG Therapy",
+    "treatments_requested": [
+        {
+            "name": "Gammagard intravenous immune globulin infusions",
+            "drug_type": "biologic",
+            "procedure_type": null,
+            "is_procedure": false,
+            "other_or_notes": "35 grams infused every four weeks for six months"
+        }
+    ],
+    "treatments_tried_but_failed": [
+        {
+            "name": "CellCept",
+            "drug_type": "standard",
+            "procedure_type": null,
+            "is_procedure": false,
+            "other_or_notes": null
+        },
+        {
+            "name": "Myfortic",
+            "drug_type": "standard",
+            "procedure_type": null,
+            "is_procedure": false,
+            "other_or_notes": null
+        },
+        {
+            "name": "Tacrolimus",
+            "drug_type": "standard",
+            "procedure_type": null,
+            "is_procedure": false,
+            "other_or_notes": null
+        },
+        {
+            "name": "Imuran",
+            "drug_type": "standard",
+            "procedure_type": null,
+            "is_procedure": false,
+            "other_or_notes": null
+        }
+    ],
+    "treatments_tried_and_worked": [],
+    "treatments_not_tried": [],
+    "is_denial_upheld": false,
+    "issues_considered": [
+        "medical_necessity",
+        "plan_coverage"
+    ],
+    "other_issues": null,
+    "guidelines_support": null,
+    "guidelines_not_support": null,
+    "guidelines_details": "No formal guidelines for the management of hypogammaglobulinemia in SLE, but immunoglobulin replacement may be reasonable for patients with recurrent infections.",
+    "soc_support": true,
+    "soc_not_support": null,
+    "soc_details": "Standard management involves treating the primary condition causing hypogammaglobulinemia. In this case, IVIG is more beneficial than standard therapy.",
+    "study_support": true,
+    "study_details": [
+        {
+            "study_name": "Management of Hypogammaglobulinemia in SLE",
+            "study_authors": "Various Researchers",
+            "key_findings": "IVIG may be reasonable for patients with recurrent infections and those on B cell depleting therapy."
+        }
+    ],
+    "key_questions": [
+        "medical_necessity",
+        "plan_coverage"
+    ],
+    "expedited": true,
+    "rationale": "The requested IVIG therapy is likely to be more beneficial for the patient's condition than any available standard therapy, given the patient's history of recurrent infections and failure of other treatments.",
+    "reviewer_credentials": "Physician reviewers are board certified in internal medicine and rheumatology, with expertise in treating similar conditions."
+}

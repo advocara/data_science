@@ -1,0 +1,65 @@
+{
+    "case_id": "MN23-40343",
+    "year": 2023,
+    "patient_info": {
+        "age_range": "51 to 64",
+        "gender": "Female"
+    },
+    "diagnosis": "Lupus",
+    "secondary_conditions": [
+        "Obesity",
+        "Fatty Liver",
+        "GERD"
+    ],
+    "complications": [],
+    "symptoms": [],
+    "treatment_category": "Pharmacy",
+    "treatment_subcategory": "Weight Control",
+    "treatments_requested": [
+        {
+            "name": "Wegovy solution auto-injection 0.25 mg/0.5 mL",
+            "drug_type": "biologic",
+            "procedure_type": null,
+            "is_procedure": false,
+            "other_or_notes": null
+        }
+    ],
+    "treatments_tried_but_failed": [
+        {
+            "name": "Qsymia",
+            "drug_type": "standard",
+            "procedure_type": null,
+            "is_procedure": false,
+            "other_or_notes": "Tolerated but lacks benefits for fatty liver disease"
+        }
+    ],
+    "treatments_tried_and_worked": [],
+    "treatments_not_tried": [],
+    "is_denial_upheld": false,
+    "issues_considered": [
+        "medical_necessity",
+        "plan_coverage"
+    ],
+    "other_issues": null,
+    "guidelines_support": true,
+    "guidelines_not_support": null,
+    "guidelines_details": "Government regulations approve Wegovy for patients with BMI ≥ 30 kg/m2 or BMI ≥ 27 kg/m2 with comorbidities.",
+    "soc_support": true,
+    "soc_not_support": null,
+    "soc_details": "Wegovy, combined with lifestyle intervention, produces larger weight losses than behavioral treatment alone.",
+    "study_support": true,
+    "study_details": [
+        {
+            "study_name": "Study on glucagon-like peptide-1 receptor agonists",
+            "study_authors": "Not specified",
+            "key_findings": "Promising results in weight reduction in obese patients with and without diabetes."
+        }
+    ],
+    "key_questions": [
+        "medical_necessity",
+        "plan_coverage"
+    ],
+    "expedited": true,
+    "rationale": "The patient meets the government requirement for Wegovy therapy based on BMI criteria and has been unsuccessful in achieving adequate weight loss through other means. Wegovy is medically necessary for sustained long-term weight loss and reduction in health-related risks.",
+    "reviewer_credentials": "Board-certified in endocrinology, diabetes, and metabolism, actively practicing with expertise in the treatment of the enrollee’s medical condition."
+}

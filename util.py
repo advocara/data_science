@@ -1,6 +1,3 @@
-
-
-
 import os
 
 from openai import OpenAI
@@ -18,5 +15,13 @@ def load_openai_key() -> str:
 
 def get_openai_client() -> OpenAI:
     """Get OpenAI client with API key"""
-    OpenAI.api_key = load_openai_key()
-    return OpenAI(api_key=load_openai_key())
+    api_key = load_openai_key()
+    client = OpenAI(api_key=api_key)
+
+    return client
+
+
+if __name__ == "__main__":
+    client = get_openai_client()
+    print(f"OpenAI client initialized: {client}")
+
