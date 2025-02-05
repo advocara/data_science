@@ -1,6 +1,7 @@
 import json
 import glob
 import os
+from typing import Dict, Tuple
 
 import pandas as pd
 import numpy as np
@@ -8,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 
-from random_forest_paths import extract_multi_feature_paths, analyze_feature_impact, format_impact_analysis
+from random_forest_paths import extract_multi_feature_paths, analyze_feature_impact, format_impact_analysis, FeatureImpact
 from results.model.appeal import MedicalInsuranceAppeal
 from term_normalizer import Normalizer
 
@@ -75,7 +76,7 @@ def train_random_forest(X, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
     # Train RandomForest model
-    clf = RandomForestClassifier(n_estimators=100, random_state=42)
+    clf = RandomForestClassifier(n_estimators=100, random_state=42, max_depth=4)
     clf.fit(X_train, y_train)
     
     return clf, X_train, X_test, y_train, y_test
@@ -116,9 +117,9 @@ feature_importances = model.feature_importances_
 #### ======
 
 # **Use our path counting module for Feature Path Analysis**
-print("\n=== Feature Impact Analysis ===")
-impact_metrics = analyze_feature_impact(model, X, min_occurrences=5, max_path_length=3)
-results = format_impact_analysis(impact_metrics, top_n=20)
+print("\n\n\n\n\n===\n===\n=== Feature Impact Analysis ===")
+impact_metrics: Dict[Tuple[str, ...], FeatureImpact] = analyze_feature_impact(model, X, min_occurrences=5, max_path_length=3)
+results = format_impact_analysis(impact_metrics, top_n=50)
 
 print("\nMost Impactful Feature Combinations:")
 print("------------------------------------")

@@ -24,3 +24,18 @@ Note that imr_analyzer.py has a function to print some appeals to a markdown fil
 
 * there is (currently) some dead or unused code, such as an aborted predict_tpot.py script that tried to use a different model, and perhaps some LLM based summarization vs the parse, normalize and predict approach. 
 
+### Algorithm
+
+A key output metric is "impact", which is the absolute difference between the denial rate of a feature path and the overall denial rate.
+`impact = abs(deny_rate - baseline_denial_rate)`
+
+Where:
+
+    deny_rate = `stats['deny'] / stats['count']` → Proportion of cases that were denied among cases with this feature path.
+    `baseline_denial_rate = total_denials / total_samples` → The overall rate of denials across all appeals.
+    impact is the absolute difference between these two rates.
+
+E.g. if the overall denial rate is 30% and the combination of `age_range_41 to 50 + treatment_subcategory_Occupational Therapy + treatments_requested_Glatiramer Acetate` has a denial rate of 60%, then the impact is 30%. 
+
+Impact as defined here is always bad for the consumer - higher percentages mean more denials over the baseline. 
+

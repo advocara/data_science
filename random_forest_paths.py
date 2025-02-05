@@ -1,12 +1,20 @@
 from collections import Counter, defaultdict
 from itertools import combinations
-from typing import Dict, Tuple, List
+from typing import Dict, Tuple, List, Literal
+from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.tree import plot_tree
 from sklearn.ensemble import RandomForestClassifier
+
+@dataclass
+class FeatureImpact:
+    count: int
+    deny_rate: float
+    impact: float
+    direction: Literal['increases denials', 'decreases denials']
 
 def extract_multi_feature_paths(model, df: pd.DataFrame, min_occurrences=5, max_path_length=4):
     """
@@ -152,9 +160,18 @@ def visualize_decision_tree(model, feature_names, max_depth=4):
     plot_tree(model.estimators_[0], feature_names=feature_names, filled=True, max_depth=max_depth)
     plt.show()
 
-def analyze_feature_impact(model, df: pd.DataFrame, min_occurrences=5, max_path_length=4):
+def analyze_feature_impact(model, df: pd.DataFrame, min_occurrences=5, max_path_length=4) -> Dict[Tuple[str, ...], FeatureImpact]:
     """
     Analyzes feature combinations to determine their impact on denial decisions.
+    
+    Args:
+        model: RandomForestClassifier
+        df: DataFrame with features
+        min_occurrences: Minimum times a combination must appear
+        max_path_length: Maximum length of feature combinations
+    
+    Returns:
+        Dictionary mapping feature combinations to their impact metrics
     """
     feature_names = df.columns
     binary_columns = [
@@ -219,50 +236,67 @@ def analyze_feature_impact(model, df: pd.DataFrame, min_occurrences=5, max_path_
                             stats['approve'] += samples_in_leaf
 
     # Calculate impact metrics
-    impact_metrics = {}
+    impact_metrics: Dict[Tuple[str, ...], FeatureImpact] = {}
     for combo, stats in path_stats.items():
         if stats['count'] >= min_occurrences:
             deny_rate = stats['deny'] / stats['count']
-            impact = abs(deny_rate - baseline_denial_rate)
+            impact = deny_rate - baseline_denial_rate
             
-            impact_metrics[combo] = {
-                'count': stats['count'],
-                'deny_rate': deny_rate,
-                'impact': impact,
-                'direction': 'increases denials' if deny_rate > baseline_denial_rate else 'decreases denials'
-            }
-
+            impact_metrics[combo] = FeatureImpact(
+                count=stats['count'],
+                deny_rate=deny_rate,
+                impact=impact,
+                direction='increases denials' if impact > 0 else 'decreases denials'
+            )
+    all_impacts = [round(float(im.impact), 3) for im in impact_metrics.values()]
+    print(f"10 smallest impacts: {all_impacts[:10]}")
     return impact_metrics
 
-def format_impact_analysis(impact_metrics, top_n=20):
+def format_impact_analysis(impact_metrics: Dict[Tuple[str, ...], FeatureImpact], top_n: int) -> List[str]:
     """
     Formats the impact analysis results into a readable format.
     
     Args:
-        impact_metrics: Dictionary from analyze_feature_impact
+        impact_metrics: Dictionary mapping feature combinations to their impact metrics
         top_n: Number of top impactful combinations to show
     
     Returns:
         List of formatted strings describing the most impactful feature combinations
     """
-    # Sort by impact
-    sorted_impacts = sorted(
+    # Find the maximum absolute impact value
+    impacts = sorted([metrics.impact for metrics in impact_metrics.values()])
+
+    print(f"Maximum impacts: {impacts[-20:]}")
+    print(f"Minimum impacts: {impacts[:20]}")
+
+    # Sort by absolute impact value to get the most impactful combinations
+    sorted_positive_impacts = sorted(
         impact_metrics.items(),
-        key=lambda x: (x[1]['impact'], x[1]['count']),
-        reverse=True
+        key=lambda x: ( x[1].impact, x[1].count),  # Added abs() here
+        reverse=True  # Biggest impact first
     )[:top_n]
-    
+
+    sorted_negative_impacts = sorted(
+        impact_metrics.items(),
+        key=lambda x: ( x[1].impact, x[1].count),  # Added abs() here
+        reverse=False  # Biggest impact first
+    )[:top_n]
+
+    print(f"max sorted positive impact value: {sorted_positive_impacts[0][1].impact}")
+    print(f"min sorted negative impact value: {sorted_negative_impacts[0][1].impact}")
+
+    sorted_impacts = sorted_positive_impacts + sorted_negative_impacts
     results = []
-    for combo, metrics in sorted_impacts:
+    for combo, metrics in sorted_impacts: # impacts is now a sorted list of tuple keys and metric object values
         feature_str = " + ".join(combo)
-        impact_pct = metrics['impact'] * 100
-        deny_rate_pct = metrics['deny_rate'] * 100
+        impact_pct = metrics.impact * 100
+        deny_rate_pct = metrics.deny_rate * 100
         
         result = (
             f"Features: {feature_str}\n"
-            f"Impact: {impact_pct:.1f}% ({metrics['direction']})\n"
+            f"Impact: {impact_pct:.1f}% ({metrics.direction})\n"
             f"Denial Rate: {deny_rate_pct:.1f}%\n"
-            f"Occurrences: {metrics['count']}\n"
+            f"Occurrences: {metrics.count}\n"
         )
         results.append(result)
     
