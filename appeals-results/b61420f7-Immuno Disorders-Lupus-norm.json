@@ -1,0 +1,47 @@
+{
+  "case_id": "MN12-14231",
+  "year": 2012,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Uterine Prolapse"
+  ],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Emergency/Urg Care",
+  "treatment_subcategory": "Ambulance/Transport",
+  "treatments_requested": [
+    {
+      "name": "Medical Transportation Services",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Requested for treatment of uterine prolapse and systemic lupus erythematosus"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The requested medical transportation services are not medically necessary as there is no documented inability to ambulate, no orthopedic or neurologic deficits, and no evidence of cardiac or respiratory compromise. The patient is not homebound and does not use assistive devices or a wheelchair. Her conditions are chronic but stable, and she has not undergone a physical therapy assessment.",
+  "reviewer_credentials": null
+}

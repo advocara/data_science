@@ -1,0 +1,84 @@
+{
+  "case_id": "EI16-23794",
+  "year": 2016,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Scleroderma"
+  ],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "IVIG Therapy",
+  "treatments_requested": [
+    {
+      "name": "IVIG",
+      "drug_type": "experimental",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Corticosteroids",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Mycophenolate Mofetil",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Cyclophosphamide",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Azathioprine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": true,
+  "guidelines_details": "No guidelines or clinical trials addressing the proper treatment for Scleromyxedema with IVIG.",
+  "soc_support": null,
+  "soc_not_support": true,
+  "soc_details": "IVIG is reserved for refractory cases of scleroderma, not standard for SLE.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Blum and colleagues",
+      "study_authors": "Blum et al.",
+      "key_findings": "Systemic manifestations of scleromyxedema mimic systemic sclerosis. IVIG showed a 100% complete or partial response rate in 8 out of 10 patients."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested IVIG is not likely to be more beneficial for treatment of the patient\u2019s medical condition than any available standard therapy. The patient's diagnosis does not confirm scleromyxedema, and standard therapies for scleroderma have not been tried.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in rheumatology."
+}

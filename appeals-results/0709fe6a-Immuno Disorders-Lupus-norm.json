@@ -1,0 +1,57 @@
+{
+  "case_id": "MN19-31767",
+  "year": 2019,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Herniated Disc",
+    "Post-discectomy"
+  ],
+  "complications": [],
+  "symptoms": [
+    "joint pain",
+    "joint tenderness"
+  ],
+  "treatment_category": "DME",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Paraffin Therapy",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Home wax bath kit/portable paraffin bath unit"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Paraffin wax treatment is widely used for hand-related diseases and is effective in raising tissue temperature and maintaining it longer than other methods.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Paraffin wax bath therapy is commonly used in conjunction with physical therapy to enhance hand functionality and relieve pain.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Paraffin wax bath treatment effectiveness",
+      "study_authors": "Not specified",
+      "key_findings": "Paraffin wax bath treatment is more effective at raising and maintaining tissue temperature compared to other methods."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The paraffin wax bath therapy is medically necessary for the enrollee's refractory hand pain and functional limitations associated with lupus, as it enhances hand functionality and complements physical therapy.",
+  "reviewer_credentials": "Board certified in physical medicine and rehabilitation and pain management, actively practicing with expertise in treating similar conditions."
+}

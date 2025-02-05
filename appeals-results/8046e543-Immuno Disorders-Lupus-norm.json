@@ -1,0 +1,59 @@
+{
+  "case_id": "MN15-20170",
+  "year": 2015,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Male"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Analgesics",
+  "treatments_requested": [
+    {
+      "name": "Oxycontin",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Quantity of 120 tablets per month for systemic lupus erythematosus"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Multidisciplinary Treatments",
+      "drug_type": null,
+      "procedure_type": "physical_therapy",
+      "is_procedure": true,
+      "other_or_notes": "Includes physical therapy, massage therapy, behavioral therapy, and injections"
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Long-term opioids are associated with a high risk of dependence and tolerance. Current standard of care for chronic pain includes multidisciplinary treatments.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Standard of care for chronic pain associated with disc herniation includes multidisciplinary practice treatments.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Retrospective study on opioid-induced hyperalgesia",
+      "study_authors": "Researchers",
+      "key_findings": "High dose and short acting opiates might contribute to pain sensitization via opioid-induced hyperalgesia. Detoxification of high dose opiates for chronic pain reported a significant decrease in pain."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested medication quantity is not medically necessary for treatment of the patient\u2019s medical condition. Long-term opioids are not recommended due to high risk of dependence and tolerance.",
+  "reviewer_credentials": "Board certified in anesthesiology with sub-specialty certification in pain medicine, actively practicing, expert in treatment of the enrollee\u2019s medical condition."
+}

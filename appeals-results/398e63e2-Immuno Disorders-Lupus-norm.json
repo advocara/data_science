@@ -1,0 +1,78 @@
+{
+  "case_id": "MN13-15237",
+  "year": 2013,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "H.P. Acthar Gel",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Requested for treatment of systemic lupus erythematosus (SLE)"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "High-Dose Corticosteroids",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Significant potential toxicities"
+    },
+    {
+      "name": "cyclophosphamide",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Significant potential toxicities"
+    },
+    {
+      "name": "Rituximab",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Significant potential toxicities"
+    }
+  ],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Drug Des Devel Ther",
+      "study_authors": "Bomback et al",
+      "key_findings": "Partial or complete remission in 11 out of 21 patients with nephrotic syndrome; proteinuria reduced to less than 500 mg/24 hours in four patients."
+    },
+    {
+      "study_name": "Am J Nephrol",
+      "study_authors": "Bomback et al",
+      "key_findings": "In a study of 15 patients with resistant glomerular disease, two of five resistant membranous nephropathy patients achieved clinical remission."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The physician reviewer found that the submitted documentation demonstrates the medical necessity of Acthar gel for controlling the patient's proteinuria. Alternative therapies have significant potential toxicities.",
+  "reviewer_credentials": null
+}

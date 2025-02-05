@@ -1,0 +1,47 @@
+{
+  "case_id": "EI02-1216",
+  "year": 2002,
+  "patient_info": {
+    "age_range": "Unknown",
+    "gender": "Other"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Special Proc",
+  "treatment_subcategory": "Stem Cell Transplant",
+  "treatments_requested": [
+    {
+      "name": "Autologous Peripheral Blood Stem Cell Transplantation",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Experimental/Investigational"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "Three physician reviewers concluded that APBSCT is likely to be more beneficial for treating the enrollee's SLE than any available standard therapy, leading to the overturning of the health plan's denial.",
+  "reviewer_credentials": "Three physician reviewers with expertise in experimental/investigational treatments."
+}

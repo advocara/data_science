@@ -1,0 +1,89 @@
+{
+  "case_id": "MN12-14456",
+  "year": 2012,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Fibromyalgia"
+  ],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Oxycontin",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Physical Therapy",
+      "drug_type": null,
+      "procedure_type": "physical_therapy",
+      "is_procedure": true,
+      "other_or_notes": null
+    },
+    {
+      "name": "Massage Therapy",
+      "drug_type": null,
+      "procedure_type": "physical_therapy",
+      "is_procedure": true,
+      "other_or_notes": null
+    },
+    {
+      "name": "CBT",
+      "drug_type": null,
+      "procedure_type": "psychotherapy",
+      "is_procedure": true,
+      "other_or_notes": null
+    },
+    {
+      "name": "Injections",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": null
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Current guidelines recommend multidisciplinary approaches for chronic pain management, including non-narcotic medications and therapies, rather than high-dose opiates.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Standards of care suggest non-narcotic treatments and therapies for chronic pain management, with opiates as adjunctive therapy only under close monitoring.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Baron and McDonald Study",
+      "study_authors": "Baron and McDonald",
+      "key_findings": "High dose opiates might contribute to pain sensitization via opioid-induced hyperalgesia, decreasing patient pain threshold."
+    },
+    {
+      "study_name": "Ballantyne and Mao Study",
+      "study_authors": "Ballantyne and Mao",
+      "key_findings": "Prolonged use of high dose opiates may induce tolerance, abnormal pain sensitivity, and hormonal effects."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "confirm_diagnosis"
+  ],
+  "expedited": false,
+  "rationale": "The requested Oxycontin is not medically necessary for the patient's condition of Lupus and fibromyalgia, as these are non-malignant pain conditions. Current guidelines and standards of care recommend non-narcotic treatments and therapies for chronic pain management. High-dose opiates are not supported due to potential adverse effects and lack of demonstrated medical necessity.",
+  "reviewer_credentials": "Physician reviewer with expertise in pain management."
+}

@@ -1,0 +1,47 @@
+{
+  "case_id": "MN20-33405",
+  "year": 2020,
+  "patient_info": {
+    "age_range": "65+",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Osteoarthritis"
+  ],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Pain Medication",
+  "treatments_requested": [
+    {
+      "name": "Tramadol",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Used to treat pain due to osteoarthritis of the hands."
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "A professional society provides Tramadol with a conditional recommendation for therapy.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Tramadol is part of the spectrum of treatment for osteoarthritis of the hands.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The requested service is medically necessary for the treatment of the enrollee\u2019s medical condition. Tramadol is a pain-killer, and treatment of pain is a goal of therapy. There is a low risk of addiction with the proposed dosing.",
+  "reviewer_credentials": "Board certified in rheumatology, actively practicing, expert in the treatment of the enrollee\u2019s medical condition."
+}

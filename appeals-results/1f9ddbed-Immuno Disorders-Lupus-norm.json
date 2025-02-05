@@ -1,0 +1,90 @@
+{
+  "case_id": "EI22-37182",
+  "year": 2022,
+  "patient_info": {
+    "age_range": "11 to 20",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Arthritis Rx",
+  "treatments_requested": [
+    {
+      "name": "Rituximab",
+      "drug_type": "experimental",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Azathioprine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Mycophenolate Mofetil",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Benlysta",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Anifrolumab",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Current medical literature lacks data supporting the efficacy of rituximab for moderately-to-severely active systemic lupus erythematosus.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Standards of care do not support rituximab for the patient's condition without refractory symptoms.",
+  "study_support": false,
+  "study_details": [
+    {
+      "study_name": "Al-Adhoubi and Bystrom",
+      "study_authors": "Al-Adhoubi and Bystrom",
+      "key_findings": "Rituximab may be used for refractory lupus nephritis or diffuse alveolar hemorrhage, but not supported for this patient's condition."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "Rituxan is not likely to be more beneficial than available standard therapies for the patient's condition. The patient's systemic lupus erythematosus is clinically stable, and there is no evidence of refractory symptoms requiring rituximab.",
+  "reviewer_credentials": "Physician reviewers are board certified in internal medicine with sub-specialty certification in rheumatology and have clinical experience treating similar conditions."
+}

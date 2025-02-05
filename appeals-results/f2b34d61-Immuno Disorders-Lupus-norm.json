@@ -1,0 +1,76 @@
+{
+  "case_id": "MN16-21720",
+  "year": 2016,
+  "patient_info": {
+    "age_range": "11 to 20",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [
+    "Refractory disease",
+    "Renal failure"
+  ],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Abatacept",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Off-label use for lupus nephritis"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Steroids",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Mycophenolate Mofetil",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Cyclophosphamide",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": "Limited data on efficacy but literature supports safety of Orencia in lupus treatment.",
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Literature supporting Orencia safety in lupus",
+      "study_authors": "Not specified",
+      "key_findings": "Limited data on efficacy, but supports safety in lupus treatment."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The patient has refractory disease and requires a medication that is off-label. Given the lack of response to other treatments and the risk of renal failure, Orencia is deemed medically necessary.",
+  "reviewer_credentials": "Board certified in pediatrics with sub-specialty in pediatric rheumatology, actively practicing, expert in treating similar conditions."
+}

@@ -1,0 +1,104 @@
+{
+  "case_id": "MN22-37832",
+  "year": 2022,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Male"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "inflammatory arthritis",
+    "malar rash",
+    "hypocomplementemia"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Biologics",
+  "treatments_requested": [
+    {
+      "name": "Benlysta",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Steroids",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Antimalarials",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Immunosuppressive Therapy with Methotrexate",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Cyclophosphamide",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Rituximab",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "IVIG",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Robust evidence from randomized clinical studies and observational, real-world studies has demonstrated the tolerability and efficacy of belimumab for reducing disease activity and the risk of new, severe SLE flares.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Belimumab has established its position as a disease modifier in the SLE treatment paradigms.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Pisetsky and Lipsky",
+      "study_authors": "Pisetsky and Lipsky",
+      "key_findings": "Many patients with SLE are ANA negative at screening. Limitations in the ANA assays or a transition in some patients to a serologically negative state may explain ANA negativity in persons with true SLE."
+    },
+    {
+      "study_name": "Levy and colleagues",
+      "study_authors": "Levy and colleagues",
+      "key_findings": "Belimumab has established its position as a disease modifier in the SLE treatment paradigms."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested medication is medically necessary for treatment of the patient\u2019s medical condition. The Health Plan\u2019s denial should be overturned.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in rheumatology and actively practicing."
+}

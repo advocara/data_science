@@ -1,0 +1,48 @@
+{
+  "case_id": "MN16-23712",
+  "year": 2016,
+  "patient_info": {
+    "age_range": "21 to 30",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "cataplexy",
+    "hypersomnia"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Sodium Oxybate",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "FDA approved for narcolepsy with cataplexy"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Xyrem is the only FDA approved medication for narcolepsy with cataplexy.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Xyrem is established as medically necessary for narcolepsy with cataplexy.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The reviewer found that Xyrem is medically necessary for the treatment of narcolepsy with cataplexy, supported by clinical documentation and literature.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in pulmonary disease, actively practicing, and expert in treating similar conditions."
+}

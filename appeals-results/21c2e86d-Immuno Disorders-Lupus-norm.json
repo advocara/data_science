@@ -1,0 +1,78 @@
+{
+  "case_id": "MN23-38795",
+  "year": 2023,
+  "patient_info": {
+    "age_range": "21 to 30",
+    "gender": "Male"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Chronic Kidney Disease",
+    "Proteinuria"
+  ],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Lupkynis",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Mycophenolate Mofetil",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Lupkynis",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Per the American College of Rheumatology (ACR) guidelines, continuing Lupkynis is appropriate for this patient.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "The U.S. Food and Drug Administration (FDA) has approved Lupkynis to be used with other medications to treat patients with active lupus nephritis.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Study on Lupkynis efficacy",
+      "study_authors": "Not specified",
+      "key_findings": "Addition of low-dose Lupkynis to mycophenolate mofetil and corticosteroids results in a superior renal response compared to mycophenolate mofetil and corticosteroids alone."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested Lupkynis 7.9 mg is medically necessary for treatment of this patient\u2019s medical condition. The Health Plan\u2019s denial should be overturned.",
+  "reviewer_credentials": "Board certified in internal medicine with subspecialty certification in nephrology, actively practicing, expert in the treatment of the enrollee\u2019s medical condition."
+}

@@ -1,0 +1,59 @@
+{
+  "case_id": "MN20-33531",
+  "year": 2020,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [
+    "Recurrent infections",
+    "Avascular necrosis of the hips"
+  ],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Anti-inflammatories",
+  "treatments_requested": [
+    {
+      "name": "H.P. Acthar Gel",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Administered subcutaneously twice a week"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "The U.S. Food and Drug Administration approves the use of Acthar Gel for rheumatic disorders and diseases, such as systemic lupus erythematosus (SLE) flares.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Acthar Gel is considered an alternative to corticosteroids in the treatment of SLE, as per study findings.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Use of Acthar Gel in SLE treatment",
+      "study_authors": "Li and colleagues",
+      "key_findings": "Acthar Gel appears to be safe and well-tolerated after six months of treatment, with a significant reduction in disease activity."
+    },
+    {
+      "study_name": "Acthar Gel in nephrotic syndrome",
+      "study_authors": "Unnamed",
+      "key_findings": "Acthar Gel may meet an important treatment need in patients with treatment-resistant NS."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The patient has failed standard therapy and is experiencing complications of chronic corticosteroid use. Acthar Gel is medically necessary due to its safety and efficacy in reducing disease activity in SLE.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in rheumatology, actively practicing, and experienced in treating similar conditions."
+}

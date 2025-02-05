@@ -1,0 +1,88 @@
+{
+  "case_id": "EI22-37078",
+  "year": 2022,
+  "patient_info": {
+    "age_range": "11 to 20",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Antiphospholipid Syndrome",
+    "Antiphospholipid Syndrome"
+  ],
+  "complications": [],
+  "symptoms": [
+    "joint pain",
+    "muscle pain"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Arthritis Rx",
+  "treatments_requested": [
+    {
+      "name": "Abatacept",
+      "drug_type": "experimental",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Azathioprine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Mycophenolate Mofetil",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Benlysta",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Anifrolumab",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Orencia is not indicated for the treatment of positive lupus anticoagulant and anticardiolipin. Medical literature shows Orencia failed to meet its primary endpoint in a phase II/III trial for lupus nephritis.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Standard medications recommended for SLE include azathioprine, CellCept, Benlysta, and Saphnelo, which have been demonstrated to be safe and effective.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Phase II/III trial for lupus nephritis",
+      "study_authors": "Not specified",
+      "key_findings": "Orencia failed to meet its primary endpoint, time to complete response."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested Orencia is not likely to be more beneficial for treatment of the patient\u2019s medical condition than any available standard therapy. The Health Plan\u2019s denial should be upheld.",
+  "reviewer_credentials": "Physician reviewers are board certified in internal medicine with subspecialty certification in rheumatology and are actively practicing."
+}

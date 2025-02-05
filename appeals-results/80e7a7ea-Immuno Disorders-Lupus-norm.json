@@ -1,0 +1,50 @@
+{
+  "case_id": "MN11-12016",
+  "year": 2011,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Syncope",
+    "Asthma",
+    "Fibromyalgia",
+    "Hypertension"
+  ],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "PET Scan",
+  "treatments_requested": [
+    {
+      "name": "PET Scan",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "The American College of Radiology notes that PET scans are primarily used for patients with known malignancy. There is no current literature supporting PET scans as a screening examination for malignancy in patients without specific signs and symptoms of disease.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "PET scans are not recommended for diagnostic uses outside of established neoplasms or specific conditions like solitary pulmonary nodules.",
+  "study_support": false,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The medical necessity of the requested PET scan has not been established in this clinical setting due to lack of supporting literature and guidelines for its use in patients without specific signs and symptoms of disease.",
+  "reviewer_credentials": null
+}

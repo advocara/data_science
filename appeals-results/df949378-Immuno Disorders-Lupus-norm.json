@@ -1,0 +1,51 @@
+{
+  "case_id": "MN23-39808",
+  "year": 2023,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Male"
+  },
+  "diagnosis": "Lupus",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Weight Control",
+  "treatments_requested": [
+    {
+      "name": "Semaglutide",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "GLP-1 receptor agonist for weight management"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Current medical literature supports the use of Wegovy in promoting weight loss with low health risks.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "GLP-1 receptor agonists have an established efficacy and safety profile for weight management.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "GLP-1 Receptor Agonists in Weight Management",
+      "study_authors": "Various researchers",
+      "key_findings": "GLP-1 analogs improve glycemic control, reduce body weight, and decrease cardiovascular risk."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested medication, Wegovy, is medically necessary for the treatment of the patient's condition due to its efficacy in weight management and low associated health risks.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in endocrinology, diabetes, and metabolism."
+}

@@ -1,0 +1,75 @@
+{
+  "case_id": "EI10-10752",
+  "year": 2010,
+  "patient_info": {
+    "age_range": "11 to 20",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Connective Tissue Disorder",
+    "Migraine",
+    "Epilepsy",
+    "Vasculitis"
+  ],
+  "complications": [],
+  "symptoms": [
+    "migraine"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Botox Injection",
+  "treatments_requested": [
+    {
+      "name": "Botox",
+      "drug_type": "experimental",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Requested for pain secondary to connective tissue disorder and migraine headaches."
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Antiseizure Medication",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Limited by side effects."
+    },
+    {
+      "name": "Calcium Channel Blockers",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Limited by side effects."
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Clinical literature supports Botox as well tolerated with mild to moderate adverse effects. Recent studies show definitive benefit in chronic migraine patients compared to placebo.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Botox demonstrated marked improvement in patients with chronic migraine, even with ongoing medication overuse.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Recent studies with large patient populations",
+      "study_authors": "Not specified",
+      "key_findings": "Definitive benefit in chronic migraine patients compared to placebo. Marked improvement in patients treated with Botox."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": false,
+  "rationale": "The decision was overturned based on evidence that Botox is more beneficial than placebo and more likely than standard alternatives to provide migraine relief.",
+  "reviewer_credentials": "Three physician reviewers with expertise in the relevant medical fields."
+}

@@ -1,0 +1,57 @@
+{
+  "case_id": "MN15-20149",
+  "year": 2015,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Transverse Myelitis",
+    "Antiphospholipid Syndrome"
+  ],
+  "complications": [
+    "Rectal perforation",
+    "Transverse myelitis paralysis"
+  ],
+  "symptoms": [],
+  "treatment_category": "Rehab/Svcs SNF Inpt",
+  "treatment_subcategory": "Inpt Admission",
+  "treatments_requested": [
+    {
+      "name": "Skilled Nursing Facility Stay",
+      "drug_type": null,
+      "procedure_type": "rehabilitation",
+      "is_procedure": true,
+      "other_or_notes": "Requested for treatment of transverse myelitis secondary to lupus."
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Studies suggest daily land and/or water-based therapy for 8 to 12 weeks, and weight-bearing exercises for 45 to 90 minutes daily in both early and late stages of rehabilitation.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Functional recovery in transverse myelitis patients with lupus may occur later in the disease process, supporting the need for SNF services.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Recovery from transverse myelitis",
+      "study_authors": "Not specified",
+      "key_findings": "Recovery is seen during months three to six after symptom onset and may continue for up to two years."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The SNF inpatient stay is medically necessary due to the patient's paralysis from transverse myelitis secondary to lupus, and her current functional status being significantly lower than baseline. Intensive rehabilitative therapy is needed within the recovery window for transverse myelitis.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in geriatric medicine, actively practicing, and an expert in the treatment of the enrollee\u2019s medical condition."
+}

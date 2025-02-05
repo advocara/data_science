@@ -1,0 +1,60 @@
+{
+  "case_id": "EI16-24189",
+  "year": 2016,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Idiopathic Thrombocytopenic Purpura",
+    "Myelodysplastic Syndromes"
+  ],
+  "complications": [
+    "ITP and MDS complications"
+  ],
+  "symptoms": [],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "Lab Work",
+  "treatments_requested": [
+    {
+      "name": "Gene Testing",
+      "drug_type": null,
+      "procedure_type": "diagnostic",
+      "is_procedure": true,
+      "other_or_notes": "Molecular gene testing to determine if MDS is primary or secondary"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Standard Testing",
+      "drug_type": null,
+      "procedure_type": "diagnostic",
+      "is_procedure": true,
+      "other_or_notes": "Did not clarify if MDS is primary or secondary"
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "NCCN guidelines recommend molecular gene testing in appropriate cases.",
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": false,
+  "rationale": "The gene panel testing was likely to be more beneficial for treatment of the patient\u2019s medical condition than any available standard therapy. The Health Plan\u2019s denial should be overturned.",
+  "reviewer_credentials": "Physician reviewers are board certified in internal medicine with sub-specialty certification in medical oncology and are actively practicing."
+}

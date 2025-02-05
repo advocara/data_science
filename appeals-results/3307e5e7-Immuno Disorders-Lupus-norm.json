@@ -1,0 +1,45 @@
+{
+  "case_id": "MN16-22268",
+  "year": 2016,
+  "patient_info": {
+    "age_range": "21 to 30",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Arthritis Rx",
+  "treatments_requested": [
+    {
+      "name": "Abatacept",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "125 mg for treatment of rheumatoid arthritis overlapping with lupus"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Orencia is approved for patients with moderately to severely active rheumatoid arthritis with inadequate response to other treatments.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Orencia is effective in certain subsets of rheumatoid arthritis patients, including those with overlap conditions like lupus.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested Orencia 125 mg is medically indicated for the treatment of this patient, who likely has an overlap of systemic lupus erythematous and seronegative rheumatoid arthritis. The Health Plan\u2019s denial should be overturned.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in rheumatology, actively practicing, and experienced in treating similar conditions."
+}

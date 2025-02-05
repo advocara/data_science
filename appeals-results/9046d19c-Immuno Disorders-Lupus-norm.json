@@ -1,0 +1,56 @@
+{
+  "case_id": "MN18-29417",
+  "year": 2018,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "facial scarring",
+    "redness"
+  ],
+  "treatment_category": "Reconstr/Plast Proc",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Infini Laser",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Infini radiofrequency microneedling laser system for facial scarring and redness"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "California's criteria for reconstructive surgery met as per Health and Safety Code Section 1367.63.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Clinical evidence supports efficacy in treating facial scarring and redness due to lupus.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Infini laser treatment study",
+      "study_authors": "Not specified",
+      "key_findings": "High patient satisfaction and efficacy in treating atrophic skin scars with minimal post-treatment effects."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": false,
+  "rationale": "The Infini laser treatment satisfies California's criteria for reconstructive surgery and is medically necessary for the patient's condition. No other standard treatments are more likely to improve the patient's facial redness and scarring.",
+  "reviewer_credentials": null
+}

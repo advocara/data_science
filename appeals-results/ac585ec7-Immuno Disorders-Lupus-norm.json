@@ -1,0 +1,51 @@
+{
+  "case_id": "MN15-19979",
+  "year": 2015,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Benlysta",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Requested dosage: 11.6 mg/kg (920 mg) infusions"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Current medical literature supports Benlysta at doses of 1, 4, and 10 mg/kg. No support for 11.6 mg/kg.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Standards of care do not support the requested dosage of 11.6 mg/kg for Benlysta.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Major Clinical Trials",
+      "study_authors": "Not specified",
+      "key_findings": "Benlysta evaluated at doses of 1, 4, and 10 mg/kg. No support for 11.6 mg/kg."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested dosage of Benlysta 11.6 mg/kg is not supported by current medical literature or standards of care. The dosage is not medically indicated for this patient's treatment of systemic lupus erythematosus.",
+  "reviewer_credentials": null
+}

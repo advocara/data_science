@@ -1,0 +1,61 @@
+{
+  "case_id": "EI08-7681",
+  "year": 2008,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Male"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Special Proc",
+  "treatment_subcategory": "Stem Cell Transplant",
+  "treatments_requested": [
+    {
+      "name": "High-dose Chemotherapy with Stem Cell Transplant",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Experimental/Investigational"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Standard Autoimmune Therapy",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Literature support for autologous stem cell transplant",
+      "study_authors": "Not specified",
+      "key_findings": "Autologous stem cell transplant is a more encouraging alternative for patients refractory to traditional treatments for autoimmune disease."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The patient's severe, progressive autoimmune disease has not responded to standard therapies. Literature supports the requested treatment as a viable alternative for refractory cases, with no reasonable alternatives available.",
+  "reviewer_credentials": null
+}

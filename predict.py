@@ -83,17 +83,15 @@ def train_random_forest(X, y):
 
 # Load JSON files from cache directory
 medical_appeals = []
-cache_dir = "cache"
+normalized_appeal_dir = "appeals-results"
+category_substring = "Immuno Disorders-Lupus-norm"
 
 # Read all JSON files in cache directory
-for json_file in glob.glob(os.path.join(cache_dir, "*.json")):
+for json_file in glob.glob(os.path.join(normalized_appeal_dir, f"*{category_substring}*.json")):
     with open(json_file, 'r') as f:
         medical_appeals.append(MedicalInsuranceAppeal.model_validate(json.load(f)))
 
-print(f"Loaded {len(medical_appeals)} medical appeal records")
-
-#### Normalize the appeals so the string terms are the same for similar treatments, etc. ####
-Normalizer().normalize_names(medical_appeals)
+print(f"Loaded {len(medical_appeals)} medical appeal records for: {category_substring}")
 
 #### Convert to a dataframe with categories flattened as one-hot encoded columns ####
 medical_appeal_dicts = [appeal.model_dump() for appeal in medical_appeals]
@@ -108,13 +106,13 @@ model, X_train, X_test, y_train, y_test = train_random_forest(X, y)
 
 # Feature Importance
 feature_importances = model.feature_importances_
+
+### Plot single-feature importance and display bar chart ###
 # plt.barh(X.columns, feature_importances)
 # plt.xlabel("Feature Importance")
 # plt.ylabel("Feature")
 # plt.title("Random Forest Feature Importance in Medical Appeals Prediction")
 # plt.show()
-
-
 #### ======
 
 # **Use our path counting module for Feature Path Analysis**

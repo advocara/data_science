@@ -1,0 +1,75 @@
+{
+  "case_id": "MN21-36265",
+  "year": 2021,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Arthritis Rx",
+  "treatments_requested": [
+    {
+      "name": "Abatacept",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Methotrexate",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Tofacitinib",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Upadacitinib",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": false,
+  "guidelines_details": "The American College of Rheumatology guideline does not recommend a target synthetic DMARD over a biologic DMARD when adjusting treatment for rheumatoid arthritis.",
+  "soc_support": true,
+  "soc_not_support": false,
+  "soc_details": "Current medical literature supports the use of Orencia for rheumatoid arthritis with SLE overlap syndrome.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Efficacy of Orencia for Rhupus",
+      "study_authors": "Ikeda and colleagues",
+      "key_findings": "Orencia significantly decreased disease activity and abnormal antibody production in patients with rhupus."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "Orencia is medically necessary for the treatment of the patient's condition, supported by guidelines and studies.",
+  "reviewer_credentials": "Board certified in rheumatology, actively practicing, expert in the treatment of the enrollee\u2019s medical condition."
+}

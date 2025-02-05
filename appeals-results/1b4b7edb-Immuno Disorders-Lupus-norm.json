@@ -1,0 +1,64 @@
+{
+  "case_id": "MN15-20073",
+  "year": 2015,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "severe joint pain",
+    "muscle pain"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Benlysta",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Methotrexate",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Patient unable to tolerate"
+    }
+  ],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Benlysta has been demonstrated to be useful in the treatment of arthralgias and fatigue, and increases the interval between lupus flares.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Benlysta is reasonable and medically necessary for this patient's disease.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The physician reviewer found Benlysta to be medically necessary due to its effectiveness in treating arthralgias and fatigue, and increasing the interval between lupus flares. The patient failed methotrexate and could not tolerate hydroxychloroquine.",
+  "reviewer_credentials": null
+}

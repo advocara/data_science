@@ -1,0 +1,102 @@
+{
+  "case_id": "MN22-36895",
+  "year": 2022,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Tennis Elbow",
+    "Chronic Radiculopathy",
+    "Chronic Low Back Pain"
+  ],
+  "complications": [],
+  "symptoms": [
+    "hand pain",
+    "back pain"
+  ],
+  "treatment_category": "Rehab/ Svc - Outpt",
+  "treatment_subcategory": "Occupational Therapy",
+  "treatments_requested": [
+    {
+      "name": "Red Light Therapy",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Home use for pain management in lupus and lateral epicondylitis"
+    },
+    {
+      "name": "Ultrasound",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Home use for pain management"
+    },
+    {
+      "name": "Cold Therapy",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Home use for post-laminectomy syndrome"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Current medical literature does not support the efficacy of requested treatments over simpler alternatives.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Standards of care do not support the requested treatments as medically necessary.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Management of Chronic Tendon Injuries",
+      "study_authors": "Childress and Beutler",
+      "key_findings": "LLLT is a reasonable second-line alternative for persistent pain but lacks strong evidence."
+    },
+    {
+      "study_name": "Short-term Effectiveness of LLLT",
+      "study_authors": "Baktir and colleagues",
+      "key_findings": "LLLT benefits pain but is less effective than iontophoresis for function."
+    },
+    {
+      "study_name": "Effect of Photobiomodulation on Tendinopathy",
+      "study_authors": "Tripoldi and colleagues",
+      "key_findings": "Very-low-to-moderate quality evidence for photobiomodulation as adjunctive therapy."
+    },
+    {
+      "study_name": "Physical Modalities for Tenosynovitis",
+      "study_authors": "Ferrara and colleagues",
+      "key_findings": "Laser and ultrasound are effective but need more high-quality studies."
+    },
+    {
+      "study_name": "Therapeutic Ultrasound for Pain",
+      "study_authors": "Aiyer and colleagues",
+      "key_findings": "Ultrasound is a reasonable adjunct but lacks significant impact as monotherapy."
+    },
+    {
+      "study_name": "Cryotherapy and Pain Education",
+      "study_authors": "Caldas and colleagues",
+      "key_findings": "No significant difference between cryotherapy and other modalities for chronic low back pain."
+    },
+    {
+      "study_name": "Efficacy of Heat and Cold Therapies",
+      "study_authors": "Malanga and colleagues",
+      "key_findings": "Limited evidence supporting cold therapy for musculoskeletal injury."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The requested devices are not medically necessary due to lack of strong evidence supporting their efficacy over simpler alternatives.",
+  "reviewer_credentials": "Board certified in physical medicine and rehabilitation with sub-specialty certification in pain medicine."
+}

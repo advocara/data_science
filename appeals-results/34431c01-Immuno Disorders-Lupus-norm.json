@@ -1,0 +1,45 @@
+{
+  "case_id": "MN07-7426",
+  "year": 2007,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Anti-inflammatories",
+  "treatments_requested": [
+    {
+      "name": "Celecoxib",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Cox-2 inhibitor, NSAID with no antiplatelet effect, suitable for patients on Coumadin"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The use of Celebrex is medically appropriate and indicated for the patient due to its lack of antiplatelet effect, making it suitable for patients on Coumadin.",
+  "reviewer_credentials": null
+}

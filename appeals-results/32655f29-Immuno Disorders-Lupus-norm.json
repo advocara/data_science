@@ -1,0 +1,80 @@
+{
+  "case_id": "MN19-32134",
+  "year": 2019,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Rheumatoid Arthritis"
+  ],
+  "complications": [
+    "Mood disorder side effects",
+    "Lamictal interactions"
+  ],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Hormones",
+  "treatments_requested": [
+    {
+      "name": "H.P. Acthar Gel",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "80 units/mL, twice a week"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Adalimumab",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Certolizumab",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Tocilizumab",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Significant control of disease"
+    }
+  ],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Adrenocorticotropic hormone has not been endorsed for the management of any autoimmune condition by the American College of Rheumatology. Acthar gel has little evidence supporting its use.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Adrenocorticotropic hormone is not used routinely, nor is it considered the standard of care.",
+  "study_support": false,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested service is not medically necessary for the treatment of the enrollee\u2019s medical condition. Acthar gel has similar adverse reactions to corticosteroids, which are contraindicated due to severe mood disorder. There is no documentation of side effects with previous prednisone use, and corticosteroids are not contraindicated with Lamictal per prescribing information.",
+  "reviewer_credentials": "Board certified in rheumatology, actively practicing, expert in the treatment of the enrollee\u2019s medical condition."
+}

@@ -1,0 +1,47 @@
+{
+  "case_id": "MN11-12494",
+  "year": 2011,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "memory loss"
+  ],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Neuropsychological Testing",
+      "drug_type": null,
+      "procedure_type": "diagnostic",
+      "is_procedure": true,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "The patient does not meet generally accepted indications for neuropsychological testing as per peer-reviewed medical literature and medical records.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Neuropsychological consultation is appropriate for cognitive, behavioral, or emotional difficulties suspected to involve trauma, disease, or aging, affecting functioning. The clinical evidence does not support testing for this patient.",
+  "study_support": false,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The clinical evidence does not support neuropsychological testing for this patient at this time as the patient does not meet the generally accepted indications for such testing.",
+  "reviewer_credentials": null
+}

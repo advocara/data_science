@@ -1,0 +1,88 @@
+{
+  "case_id": "MN21-35718",
+  "year": 2021,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Rheumatoid Arthritis"
+  ],
+  "complications": [],
+  "symptoms": [
+    "severe inflammatory arthritis"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Arthritis Rx",
+  "treatments_requested": [
+    {
+      "name": "Abatacept",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "DMARD Therapy",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Etanercept",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Avoided due to risk of drug-induced lupus"
+    },
+    {
+      "name": "Adalimumab",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Avoided due to risk of drug-induced lupus"
+    },
+    {
+      "name": "Tofacitinib",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Upadacitinib",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": false,
+  "guidelines_details": "American College of Rheumatology Guideline supports the use of biologic DMARDs like Orencia for patients who have not responded to conventional DMARD therapy. No preference for one biologic over another is indicated.",
+  "soc_support": true,
+  "soc_not_support": false,
+  "soc_details": "Standards of care align with the guidelines, supporting the use of biologic DMARDs for this condition.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested Orencia therapy is medically necessary as the patient has failed conventional DMARD therapy and is a candidate for biologic DMARDs. Enbrel and Humira are avoided due to the risk of drug-induced lupus.",
+  "reviewer_credentials": "Board certified in rheumatology, actively practicing, expert in treating similar conditions."
+}

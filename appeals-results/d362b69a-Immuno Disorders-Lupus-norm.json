@@ -1,0 +1,64 @@
+{
+  "case_id": "MN14-19096",
+  "year": 2014,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [
+    "Solu-Medrol side effects",
+    "Intravenous access issues"
+  ],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "H.P. Acthar Gel",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "FDA approved for treatment of multiple sclerosis exacerbations"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Solu-Medrol",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Standard of care but caused significant side effects"
+    }
+  ],
+  "treatments_tried_and_worked": [
+    {
+      "name": "H.P. Acthar Gel",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Better response and fewer side effects compared to Solu-Medrol"
+    }
+  ],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Acthar gel is FDA approved for treatment of multiple sclerosis exacerbations and is an option for patients with no intravenous access or poor response to Solu-Medrol.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Acthar gel is an option for patients with no intravenous access, poor response to intravenous Solu-Medrol, and significant tolerability issues with Solu-Medrol.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "Given the patient's documented intolerance to intravenous steroids and the documented response to Acthar Gel previously, Acthar gel is medically necessary.",
+  "reviewer_credentials": null
+}

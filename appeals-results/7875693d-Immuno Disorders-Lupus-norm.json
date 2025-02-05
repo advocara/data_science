@@ -1,0 +1,60 @@
+{
+  "case_id": "MN22-38281",
+  "year": 2022,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Biologics",
+  "treatments_requested": [
+    {
+      "name": "Benlysta",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Prednisone",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Current medical literature supports the use of Benlysta for the treatment of systemic lupus.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Benlysta is used as a first-line or second-line therapy in patients with inflammatory arthritis, such as in this case, after use of Plaquenil or in combination with Plaquenil/hydroxychloroquine.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested medication, Benlysta 200 mg/mL autoinjector, is medically necessary for the treatment of the patient's medical condition. Continued therapy with Benlysta may help the patient achieve disease control.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in rheumatology, actively practicing, and an expert in the treatment of the enrollee\u2019s medical condition."
+}

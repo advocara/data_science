@@ -1,0 +1,79 @@
+{
+  "case_id": "MN14-18246",
+  "year": 2014,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Male"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "joint pain",
+    "back pain"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Analgesics",
+  "treatments_requested": [
+    {
+      "name": "Oxycontin",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Physical Therapy",
+      "drug_type": null,
+      "procedure_type": "physical_therapy",
+      "is_procedure": true,
+      "other_or_notes": null
+    },
+    {
+      "name": "Massage Therapy",
+      "drug_type": null,
+      "procedure_type": "physical_therapy",
+      "is_procedure": true,
+      "other_or_notes": null
+    },
+    {
+      "name": "CBT",
+      "drug_type": null,
+      "procedure_type": "psychotherapy",
+      "is_procedure": true,
+      "other_or_notes": null
+    },
+    {
+      "name": "Injections",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "pain management injections"
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "The current standard of care for chronic pain includes multidisciplinary approaches such as physical therapy, massage therapy, cognitive behavioral therapy, and injections. Opiates are considered adjunctive and should be prescribed with close monitoring.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "OxyContin is not considered necessary for the treatment of chronic pain without prior multidisciplinary approaches.",
+  "study_support": false,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested medication, OxyContin, is not medically necessary for the treatment of the patient's condition as the symptoms do not necessitate opioids. The standard of care suggests a multidisciplinary approach before considering opioids.",
+  "reviewer_credentials": null
+}

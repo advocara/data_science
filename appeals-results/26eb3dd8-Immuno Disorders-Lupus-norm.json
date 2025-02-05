@@ -1,0 +1,45 @@
+{
+  "case_id": "MN22-36903",
+  "year": 2022,
+  "patient_info": {
+    "age_range": "11 to 20",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "MRI",
+  "treatments_requested": [
+    {
+      "name": "MRI",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "MRI is not the preferred modality to diagnose and treat generalized polyarthralgia in SLE patients.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "MRI would not change the management approach for SLE and poses a risk for contrast nephropathy.",
+  "study_support": false,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested full body MRI is not medically necessary for the evaluation of the patient's medical condition. MRI is not the preferred modality for diagnosing generalized polyarthralgia in SLE, and it poses a risk for contrast nephropathy.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in rheumatology, actively practicing, and experienced in treating similar conditions."
+}

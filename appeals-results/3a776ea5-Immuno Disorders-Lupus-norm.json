@@ -1,0 +1,45 @@
+{
+  "case_id": "MN12-13667",
+  "year": 2012,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "DME",
+  "treatment_subcategory": "Electric Wheelchair",
+  "treatments_requested": [
+    {
+      "name": "Powered Wheelchair",
+      "drug_type": null,
+      "procedure_type": null,
+      "is_procedure": true,
+      "other_or_notes": "Requested for treatment of ankle injury"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Medicare guidelines require a mobility evaluation to determine the necessity of a power wheelchair.",
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The documentation provided does not include a mobility evaluation, which is required to determine the necessity of a power wheelchair. It is unclear if the patient has mobility-related activity of daily living deficits within the home. The presence and extent of such deficits must be documented. Another assistive device may suffice.",
+  "reviewer_credentials": null
+}

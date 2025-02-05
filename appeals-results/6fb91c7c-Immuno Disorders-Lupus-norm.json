@@ -1,0 +1,49 @@
+{
+  "case_id": "MN20-33065",
+  "year": 2020,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "positive ANA",
+    "photosensitivity",
+    "joint pain"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Pain Medication",
+  "treatments_requested": [
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Two tablets once daily"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "The patient does not meet the current American College of Rheumatology (ACR) criteria for systemic lupus erythematosus (SLE).",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Lack of evidence of neurological symptoms, hematologic issues, or malar or discoid rash. Testing for glucose-6-phosphate dehydrogenase (G6PD) not documented.",
+  "study_support": false,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested Plaquenil 200 mg two tablets once daily is not medically necessary for treatment of this patient. The patient does not meet the ACR criteria for SLE, and there is a lack of necessary documentation and testing.",
+  "reviewer_credentials": "Board certified in rheumatology, actively practicing, expert in the treatment of the enrollee\u2019s medical condition."
+}

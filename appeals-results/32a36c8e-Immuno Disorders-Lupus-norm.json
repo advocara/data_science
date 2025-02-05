@@ -1,0 +1,76 @@
+{
+  "case_id": "EI19-30255",
+  "year": 2019,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Chemotherapy",
+  "treatments_requested": [
+    {
+      "name": "Lenalidomide",
+      "drug_type": "experimental",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Thalidomide analogue with greater potency and favorable side effect profile"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Topical Steroids",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Antimalarials",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [
+    {
+      "name": "Thalidomide",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Discontinued due to side effects"
+    }
+  ],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Case series of refractory cutaneous SLE",
+      "study_authors": "Not specified",
+      "key_findings": "Thalidomide shows marked efficacy; Revlimid, a thalidomide analogue, is more potent and has a better side effect profile."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "Two of the three reviewers determined that Revlimid is likely to be more beneficial for the patient's condition than any available standard therapy. The patient's condition improved with Revlimid without untoward events.",
+  "reviewer_credentials": "All reviewers are board certified in dermatology and actively practicing, with expertise in treating the enrollee\u2019s medical condition."
+}

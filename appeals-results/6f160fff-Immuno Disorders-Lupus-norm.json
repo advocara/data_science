@@ -1,0 +1,61 @@
+{
+  "case_id": "MN07-6304",
+  "year": 2007,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "IVIG Therapy",
+  "treatments_requested": [
+    {
+      "name": "Glatiramer Acetate",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Modafinil",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "IVIG",
+      "drug_type": "infusion",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "diagnosis"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "confirm_diagnosis"
+  ],
+  "expedited": false,
+  "rationale": "The physician reviewer found no meaningful support for a diagnosis of systemic lupus erythematosus (SLE) or lupus cerebritis. There was no evidence in the records to confirm these diagnoses, and the treatments requested were deemed inappropriate in the absence of established diagnoses. Further neurological and rheumatological evaluation is indicated.",
+  "reviewer_credentials": null
+}

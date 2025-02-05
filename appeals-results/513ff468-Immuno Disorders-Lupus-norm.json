@@ -1,0 +1,61 @@
+{
+  "case_id": "MN17-26931",
+  "year": 2017,
+  "patient_info": {
+    "age_range": "21 to 30",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [
+    "Refractory proteinuria"
+  ],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "H.P. Acthar Gel",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Used for treatment of lupus nephritis"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Standard of Care",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Acthar gel is FDA indicated for nephrotic range proteinuria and has been used successfully to treat lupus nephritis.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Peer-reviewed literature supports Acthar gel for significant disease activity reduction in lupus nephritis.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Peer-reviewed medical literature",
+      "study_authors": "Researchers",
+      "key_findings": "Acthar gel may provide significant disease activity reduction in patients with systematic lupus erythematosus."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested H.P. Acthar gel 80 units is medically necessary for treatment of the patient's persistent nephrotic range proteinuria. The Health Plan\u2019s denial should be overturned.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in nephrology, actively practicing, expert in treatment of lupus nephritis."
+}

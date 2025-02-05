@@ -1,0 +1,49 @@
+{
+  "case_id": "EI02-1152",
+  "year": 2002,
+  "patient_info": {
+    "age_range": "Unknown",
+    "gender": "Other"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Antiphospholipid Syndrome"
+  ],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Special Proc",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Autologous Bone Marrow Transplant",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Experimental/Investigational"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "Three physician reviewers concluded that autologous bone marrow transplant is likely to be more beneficial for the treatment of the enrollee's catastrophic autophospholipid syndrome/severe systemic lupus than any available standard therapy. The review organization overturned the health plan's denial based on these findings.",
+  "reviewer_credentials": "Three physician reviewers with expertise in experimental/investigational treatments."
+}

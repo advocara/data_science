@@ -1,0 +1,63 @@
+{
+  "case_id": "MN22-37521",
+  "year": 2022,
+  "patient_info": {
+    "age_range": "21 to 30",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "IVIG Therapy",
+  "treatments_requested": [
+    {
+      "name": "Rituximab",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Mycophenolate Mofetil",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Unable to tolerate"
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "cyclophosphamide",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Avoided due to potential infertility"
+    }
+  ],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "According to the American College of Rheumatology (ACR) guidelines, Rituxan is an appropriate therapy for SLE, especially for patients of childbearing age who wish to preserve fertility.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "Rituxan is indicated as a third-line treatment option for SLE management, especially to avoid infertility risks associated with cyclophosphamide.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested Rituxan (rituximab) is medically necessary for the treatment of the patient's SLE, given the patient's intolerance to standard therapy and desire to avoid infertility risks.",
+  "reviewer_credentials": "Board certified in internal medicine with subspecialty certification in rheumatology, actively practicing and experienced in treating similar conditions."
+}

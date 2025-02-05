@@ -1,0 +1,53 @@
+{
+  "case_id": "MN23-39327",
+  "year": 2023,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "CNS Lupus",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Biologics",
+  "treatments_requested": [
+    {
+      "name": "Lupkynis",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Used concurrently with cyclophosphamide"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "FDA approved Lupkynis for active lupus nephritis, not CNS lupus. No established efficacy and safety for combination with cyclophosphamide.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "No current recommendations or clinical trials support the combination for CNS lupus.",
+  "study_support": false,
+  "study_details": [
+    {
+      "study_name": "Organ-threatening or life-threatening SLE treatment",
+      "study_authors": "Not specified",
+      "key_findings": "High-intensity immunosuppressive therapy followed by less intensive therapy is recommended. No data supports Lupkynis with cyclophosphamide for CNS lupus."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested medication regimen is not medically necessary for CNS lupus as per current medical literature and guidelines. The combination of Lupkynis and cyclophosphamide lacks efficacy and safety data.",
+  "reviewer_credentials": "Board certified in rheumatology, actively practicing, expert in treating similar conditions."
+}

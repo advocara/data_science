@@ -1,0 +1,49 @@
+{
+  "case_id": "MN08-7562",
+  "year": 2008,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Fibromyalgia"
+  ],
+  "complications": [],
+  "symptoms": [
+    "fatigue"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Non-FDA Approved Use",
+  "treatments_requested": [
+    {
+      "name": "Modafinil",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Requested for fatigue related to SLE and fibromyalgia"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Provigil is not FDA-approved for SLE or fibromyalgia. Safety and efficacy not established for these conditions.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Standards of care do not support Provigil for SLE or fibromyalgia.",
+  "study_support": false,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The patient's symptoms are primarily related to fibromyalgia, and Provigil is not FDA-approved for SLE or fibromyalgia. The illness may not be under control, but the requested treatment is not supported by guidelines or standards of care.",
+  "reviewer_credentials": null
+}

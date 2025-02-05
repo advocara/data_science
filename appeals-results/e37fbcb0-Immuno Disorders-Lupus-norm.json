@@ -1,0 +1,65 @@
+{
+  "case_id": "MN19-30371",
+  "year": 2019,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Migraine"
+  ],
+  "complications": [
+    "Topiramate tingling"
+  ],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Migraine Rx",
+  "treatments_requested": [
+    {
+      "name": "Topiramate",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Long-acting topiramate, FDA approved for migraine therapy"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Topiramate",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Provided good results for headaches but caused tingling"
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "Trokendi is FDA approved for migraine therapy and offers a lower side effect profile than immediate release topiramate.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "It is within the current standard of care to provide Trokendi to patients who respond to the therapeutic effect for migraine but have significant side effects with immediate release topiramate.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Study on Trokendi for migraine",
+      "study_authors": "Not specified",
+      "key_findings": "Trokendi is effective for patients who respond to migraine therapy but have side effects with immediate release topiramate."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested Trokendi is medically necessary for treatment of the patient's migraines due to its lower side effect profile and effectiveness in patients with side effects from immediate release topiramate.",
+  "reviewer_credentials": "Board certified in neurology, actively practicing, expert in treatment of the enrollee\u2019s medical condition."
+}

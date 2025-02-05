@@ -1,0 +1,83 @@
+{
+  "case_id": "MN20-33505",
+  "year": 2020,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Epilepsy",
+    "Raynaud's Phenomenon",
+    "Asthma"
+  ],
+  "complications": [
+    "Methotrexate allergy",
+    "Plaquenil allergy"
+  ],
+  "symptoms": [
+    "fatigue",
+    "pain",
+    "malar rash",
+    "inflammatory arthritis",
+    "oral ulcers",
+    "leucopenia",
+    "Raynaud's phenomenon"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Biologics",
+  "treatments_requested": [
+    {
+      "name": "Benlysta",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Belimumab 200 mg/ml"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Methotrexate",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Allergic reaction (itching)"
+    },
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Allergic reaction (rash and tongue swelling)"
+    }
+  ],
+  "treatments_tried_and_worked": [
+    {
+      "name": "Benlysta",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Previously effective"
+    }
+  ],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": false,
+  "guidelines_details": "Benlysta is indicated for the treatment of patients aged 5 years and older with active, autoantibody positive, SLE who are receiving standard therapy.",
+  "soc_support": true,
+  "soc_not_support": false,
+  "soc_details": "The patient's clinical picture is consistent with an SLE diagnosis. Benlysta is appropriate for this patient.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The patient has SLE with arthritis, oral ulcers, malar rash, leucopenia, Raynaud\u2019s phenomenon, and positive SSB antibody testing. She cannot use methotrexate or Plaquenil due to allergies and has received Benlysta in the past with good results. Her SLE has worsened off Benlysta, and she is requiring prednisone. Benlysta is appropriate for this patient.",
+  "reviewer_credentials": "The physician reviewer is board certified in rheumatology and is actively practicing. The reviewer is an expert in the treatment of the enrollee\u2019s medical condition and knowledgeable about the proposed treatment through recent or current actual clinical experience treating those with the same or similar medical condition."
+}

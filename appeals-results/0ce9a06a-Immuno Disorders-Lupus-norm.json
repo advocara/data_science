@@ -1,0 +1,56 @@
+{
+  "case_id": "MN17-25547",
+  "year": 2017,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Chronic Neutropenia",
+    "Myasthenia Gravis"
+  ],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Oxycodone-Acetaminophen",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "To be taken once every six hours as needed for pain"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Non-opioid Treatments",
+      "drug_type": "other",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Behavior therapy and other non-opioid medications"
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "The WHO ladder for pain relief suggests non-opioid treatments should be tried first. Not all non-opioid options have been utilized.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Opioids should be returned to preoperative status within weeks, and not all non-opioid medication classes have been optimized or tried.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested medication is not medically necessary as not all non-opioid treatment options have been utilized, and there are issues with opioid prescribing without documented treatment goals.",
+  "reviewer_credentials": "Board certified in anesthesiology with sub-specialty certification in pain medicine, actively practicing, and experienced in treating similar conditions."
+}

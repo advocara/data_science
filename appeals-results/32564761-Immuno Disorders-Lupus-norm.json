@@ -1,0 +1,66 @@
+{
+  "case_id": "MN16-22867",
+  "year": 2016,
+  "patient_info": {
+    "age_range": "21 to 30",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "CT Scan",
+  "treatments_requested": [
+    {
+      "name": "EEG Monitoring",
+      "drug_type": null,
+      "procedure_type": "diagnostic",
+      "is_procedure": true,
+      "other_or_notes": null
+    },
+    {
+      "name": "MRI",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": null
+    },
+    {
+      "name": "CT Scan",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": null
+    },
+    {
+      "name": "Medical Transfer",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested services, including continuous EEG monitoring, MRI scan with sedation, CT scan, and transfer to Kaiser Downey Medical Center, are not medically necessary for the treatment of the patient's condition. The patient is neurologically stable for discharge and does not require further inpatient treatment or monitoring for seizures. The seizure-like activity observed was not epileptic, and the patient is stable for outpatient treatment.",
+  "reviewer_credentials": "Board certified in neurology, actively practicing, expert in the treatment of the enrollee\u2019s medical condition with recent or current clinical experience."
+}

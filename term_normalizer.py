@@ -82,6 +82,7 @@ class Normalizer:
         print(f"Normalized: {mappingset.mappinglist}")
         return mappingset
         
+    
 
     def normalize_names(self, appeals: List[MedicalInsuranceAppeal]) -> None:
         """Normalize names of treatments, conditions, and other fields using LLM to ensure consistency"""
@@ -131,6 +132,59 @@ class Normalizer:
             appeal.symptoms = [symptom_map.get(s) for s in appeal.symptoms]
             appeal.complications = [complication_map.get(c) for c in appeal.complications]
     
+
+def store_normalized_appeals(category_substring: str) -> None:
+    """
+    Read appeals from cache, normalize names, and store in appeals-results directory.
+    
+    Args:
+        category_substring: String to match in cache filenames (e.g., 'Immuno Disorders_Lupus' for lupus appeals)
+    """
+    # Setup paths and create output directory
+    cache_dir = './cache'
+    results_dir = './appeals-results'
+    os.makedirs(results_dir, exist_ok=True)
+    
+    # Check if files already exist
+    existing_files = [f for f in os.listdir(results_dir) 
+                     if f.endswith('-norm.json') and category_substring in f]
+    if existing_files:
+        response = input(f"Found existing normalized files for '{category_substring}'. Overwrite? (y/n): ")
+        if response.lower() != 'y':
+            print("Skipping normalization...")
+            return
+    
+    # Get matching cache files
+    cache_files = [f for f in os.listdir(cache_dir) 
+                  if f.endswith('.json') and category_substring in f]
+    
+    if not cache_files:
+        print(f"No cache files found matching '{category_substring}'")
+        return
+        
+    # Load all appeals
+    appeals = []
+    for filename in cache_files:
+        with open(os.path.join(cache_dir, filename), 'r', encoding='utf-8') as f:
+            appeal_data = json.load(f)
+            appeal = MedicalInsuranceAppeal.model_validate(appeal_data)
+            appeals.append(appeal)
+    
+    print(f"Read in {len(appeals)} appeals. Normalizing names/features...")
+    normalizer = Normalizer()
+    normalizer.normalize_names(appeals)
+    
+    # Write normalized versions
+    print(f"Writing normalized versions to {results_dir}...")
+    for filename in cache_files:
+        base_name = filename.replace('.json', '')
+        norm_filename = f"{base_name}-norm.json"
+        appeal_index = cache_files.index(filename)
+        
+        with open(os.path.join(results_dir, norm_filename), 'w', encoding='utf-8') as f:
+            json.dump(appeals[appeal_index].model_dump(), f, indent=2)
+    
+    print(f"Processed {len(appeals)} appeals and saved normalized versions to {results_dir}")
 
 if __name__ == "__main__":
     print("=======") 

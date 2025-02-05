@@ -1,0 +1,60 @@
+{
+  "case_id": "MN16-23289",
+  "year": 2016,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [
+    "Achalasia",
+    "Gastroparesis",
+    "Neurogenic Bladder"
+  ],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Rituximab",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "The literature does not support the use of Rituxan for systemic lupus erythematosus (SLE) as two randomized controlled trials failed to demonstrate significant benefit compared to placebo.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Current standards of care do not support the use of Rituxan for SLE.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Merrill et al.",
+      "study_authors": "Merrill and colleagues",
+      "key_findings": "No differences were noted between placebo and rituximab in the primary and secondary endpoints."
+    },
+    {
+      "study_name": "LUNAR study",
+      "study_authors": "Rovin and colleagues",
+      "key_findings": "Rituxan did not improve clinical outcomes after one year of treatment."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested Rituxan is not medically necessary for treatment of the patient's diagnosis of SLE as current literature and standards of care do not support its use in this clinical setting.",
+  "reviewer_credentials": "Board certified in rheumatology, actively practicing, expert in the treatment of SLE."
+}

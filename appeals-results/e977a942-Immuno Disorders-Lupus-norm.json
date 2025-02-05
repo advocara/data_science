@@ -1,0 +1,76 @@
+{
+  "case_id": "MN17-25266",
+  "year": 2017,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Rituximab",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "cyclophosphamide",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "The EXPLORER and LUNAR studies did not demonstrate significant improvement with rituximab for neuropsychiatric SLE. The systemic review showed short-term benefits for non-renal SLE but not for neuropsychiatric SLE.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Rituximab is not recommended for neuropsychiatric SLE based on current standards of care.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "EXPLORER trial",
+      "study_authors": "Not specified",
+      "key_findings": "No significant difference between placebo and rituximab for primary and secondary endpoints in extra-renal SLE. Some benefits in African American and Hispanic subgroups."
+    },
+    {
+      "study_name": "LUNAR study",
+      "study_authors": "Not specified",
+      "key_findings": "Rituximab did not improve clinical outcomes in lupus nephritis when combined with MMF and corticosteroids."
+    },
+    {
+      "study_name": "Systemic review",
+      "study_authors": "Not specified",
+      "key_findings": "Rituximab is safe and effective for non-renal SLE but not recommended for neuropsychiatric SLE."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested medication, rituximab, is not medically necessary for the patient's neuropsychiatric SLE as it lacks support in medical literature and documentation for this specific condition.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in rheumatology, actively practicing, and experienced in treating similar conditions."
+}

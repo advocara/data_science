@@ -1,0 +1,77 @@
+{
+  "case_id": "MN23-39249",
+  "year": 2023,
+  "patient_info": {
+    "age_range": "31 to 40",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Anti-inflammatories",
+  "treatments_requested": [
+    {
+      "name": "Benlysta",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Requested for systemic lupus erythematosus (SLE)"
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Steroids",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Azathioprine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Recommended for SLE preconception and during pregnancy"
+    },
+    {
+      "name": "Sulfasalazine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Recommended for SLE preconception and during pregnancy"
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "According to the 2020 American College of Rheumatology Guideline, Benlysta is not recommended for SLE during pregnancy.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "The guidelines recommend other immunosuppressants like azathioprine and sulfasalazine for SLE preconception and during pregnancy.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested medication, Benlysta, is not medically necessary as the patient has not exhausted other recommended treatment options like azathioprine and sulfasalazine, which are appropriate for SLE in patients planning for pregnancy.",
+  "reviewer_credentials": "Board certified in internal medicine with subspecialty certification in rheumatology, actively practicing, and experienced in treating similar conditions."
+}

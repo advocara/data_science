@@ -1,0 +1,50 @@
+{
+  "case_id": "UR18-29072",
+  "year": 2018,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [
+    "CNS complications",
+    "Altered sensorium"
+  ],
+  "symptoms": [],
+  "treatment_category": "Transportation",
+  "treatment_subcategory": "Emergency",
+  "treatments_requested": [
+    {
+      "name": "Medical Transportation Services",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Transport with skilled nursing services and ventilator management"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "The services were necessary for treatment of the patient\u2019s emergency medical condition.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "The patient required skilled nursing services during the flight due to intensive care needs.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": false,
+  "rationale": "The services were necessary for treatment of the patient\u2019s emergency medical condition, including management of ventilator settings during the flight.",
+  "reviewer_credentials": "Board certified in neurology, actively practicing, expert in the treatment of the enrollee\u2019s medical condition."
+}

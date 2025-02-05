@@ -9,7 +9,7 @@ import openai
 from openai import OpenAI
 
 from cache import FileCache  # Update import
-from results.model.appeal import IMRRow, MedicalInsuranceAppeal
+from results.model.appeal import GenderType, IMRRow, MedicalInsuranceAppeal, PatientInfo
 from util import get_openai_client, load_openai_key
 
 MAX_CASES = 20
@@ -108,6 +108,23 @@ class IMRAnalyzer:
         if mia is None:
             raise ValueError("No object returned from OpenAI")
             
+        # override/replace structured fields even though GPT probably set them
+        mia.is_denial_upheld = imr.determination == "Upheld Decision of Health Plan"
+        mia.expedited = imr.imr_type == "Expedited"
+        mia.case_id = imr.reference_id
+        mia.year = imr.report_year
+        gender = "Male" if imr.patient_gender == "Male" else "Female" if imr.patient_gender == "Female" else "Other"
+        age_range = imr.age_range if (
+            imr.age_range is not None 
+            and type(imr.age_range) == str
+            and imr.age_range != "Not Specified" 
+            and imr.age_range != "Not Applicable"
+        ) else "Unknown"
+        mia.patient_info = PatientInfo(age_range=age_range, gender=gender)
+        mia.diagnosis = imr.diagnosis_category
+        mia.treatment_category = imr.treatment_category
+        mia.treatment_subcategory = imr.treatment_sub_category
+
         assert isinstance(mia, MedicalInsuranceAppeal)
         # Cache the successful result as the object JSON form
         self.cache.put(full_text, mia.model_dump_json(), dataset_name)
@@ -115,92 +132,7 @@ class IMRAnalyzer:
         print(f"Extracted and cached case {mia.case_id}")
 
         return mia
-            # Create normalization mappings using LLM
-    
-    
-    def appeals_to_df(self, appeals: List[MedicalInsuranceAppeal]) -> pd.DataFrame:
-        """Convert MedicalInsuranceAppeals into rows in a data frame
-        using one-hot encoding for categorical columns and lists"""
-
-        # Convert appeals to DataFrame for analysis
-        appeals_data = []
-        for appeal in appeals:
-            appeal_dict = {
-                'case_id': appeal.case_id,
-                'year': appeal.year,
-                'diagnosis': appeal.diagnosis,
-                'determination': appeal.determination,
-                'expedited': appeal.expedited,
-                'guidelines_support': appeal.guidelines_support,
-                'soc_support': appeal.soc_support,
-                'study_support': appeal.study_support,
-                'age_range': appeal.patient_info.age_range if appeal.patient_info else None,
-                'gender': appeal.patient_info.gender if appeal.patient_info else None,
-                'treatment_category': appeal.treatment_category,
-                'treatment_subcategory': appeal.treatment_subcategory,
-            }
-
-            # One-hot encode secondary conditions
-            for condition in appeal.secondary_conditions:
-                appeal_dict[f'condition_{condition.lower().replace(" ", "_")}'] = 1
-
-            # One-hot encode complications
-            for complication in appeal.complications:
-                appeal_dict[f'complication_{complication.lower().replace(" ", "_")}'] = 1
-
-            # One-hot encode symptoms
-            for symptom in appeal.symptoms:
-                appeal_dict[f'symptom_{symptom.lower().replace(" ", "_")}'] = 1
-
-            # One-hot encode treatments requested
-            for treatment in appeal.treatments_requested:
-                appeal_dict[f'requested_{treatment.name.lower().replace(" ", "_")}'] = 1
-
-            # One-hot encode treatments tried but failed
-            for treatment in appeal.treatments_tried_but_failed:
-                appeal_dict[f'failed_{treatment.name.lower().replace(" ", "_")}'] = 1
-
-            # One-hot encode treatments that worked
-            for treatment in appeal.treatments_tried_and_worked:
-                appeal_dict[f'worked_{treatment.name.lower().replace(" ", "_")}'] = 1
-
-            # One-hot encode treatments not tried
-            for treatment in appeal.treatments_not_tried:
-                appeal_dict[f'nottried_{treatment.name.lower().replace(" ", "_")}'] = 1
-
-            # One-hot encode issues considered
-            for issue in appeal.issues_considered:
-                appeal_dict[f'issue_{issue.lower()}'] = 1
-
-            # One-hot encode key questions
-            for question in appeal.key_questions:
-                appeal_dict[f'question_{question.lower()}'] = 1
-
-            # Add counts as well
-            appeal_dict.update({
-                'num_treatments_requested': len(appeal.treatments_requested),
-                'num_treatments_failed': len(appeal.treatments_tried_but_failed),
-                'num_treatments_worked': len(appeal.treatments_tried_and_worked),
-                'num_treatments_not_tried': len(appeal.treatments_not_tried),
-                'num_secondary_conditions': len(appeal.secondary_conditions),
-                'num_complications': len(appeal.complications),
-                'num_symptoms': len(appeal.symptoms),
-                'num_issues': len(appeal.issues_considered),
-                'num_studies': len(appeal.study_details)
-            })
-
-            appeals_data.append(appeal_dict)
         
-        # Create DataFrame and fill NaN values with 0 for one-hot encoded columns
-        df = pd.DataFrame(appeals_data)
-        
-        # Fill NaN values with 0 for boolean columns (one-hot encoded)
-        bool_columns = [col for col in df.columns if any(prefix in col for prefix in 
-                       ['condition_', 'complication_', 'symptom_', 'requested_', 
-                        'failed_', 'worked_', 'nottried_', 'issue_', 'question_'])]
-        df[bool_columns] = df[bool_columns].fillna(0)
-        
-        return df
 
     def print_records_to_markdown(self, query: IMRQuery, n: int = 5) -> None:
         """Print N records matching the query criteria to a markdown file

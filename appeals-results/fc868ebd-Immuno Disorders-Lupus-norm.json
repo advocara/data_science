@@ -1,0 +1,66 @@
+{
+  "case_id": "MN21-36616",
+  "year": 2021,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "muscle pain"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Anti-inflammatories",
+  "treatments_requested": [
+    {
+      "name": "Benlysta",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [
+    {
+      "name": "Hydroxychloroquine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Phase III, multicenter, randomized, placebo-controlled trial",
+      "study_authors": "Furie and colleagues",
+      "key_findings": "Benlysta was efficacious in controlling SLE symptoms with statistically significant improvements in SLE responder index scores compared to placebo by 76 weeks."
+    },
+    {
+      "study_name": "Randomized placebo controlled trial",
+      "study_authors": "Navarra and colleagues",
+      "key_findings": "Benlysta use was associated with improved SLE symptoms when compared to placebo by 52 weeks."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The physician reviewer found that submitted documentation supports the medical necessity of the requested medication. The patient has a SELENA-SLEDAI score of 13 and has failed to respond to other standard drugs for SLE treatment. Studies support the efficacy of Benlysta in controlling SLE symptoms.",
+  "reviewer_credentials": "Board certified in internal medicine with sub-specialty certification in rheumatology, actively practicing, and an expert in the treatment of the enrollee\u2019s medical condition."
+}

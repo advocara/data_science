@@ -1,0 +1,59 @@
+{
+  "case_id": "MN06-5503",
+  "year": 2006,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [
+    "Myocardial infarction",
+    "Left ventricular aneurysm",
+    "Congestive heart failure"
+  ],
+  "symptoms": [],
+  "treatment_category": "Cardio-Vasc Proc",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Surgical Referral",
+      "drug_type": null,
+      "procedure_type": "surgery",
+      "is_procedure": true,
+      "other_or_notes": "Referral for evaluation and potential surgical resection of left ventricular aneurysm"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Cardiac Surgery Consultation",
+      "drug_type": null,
+      "procedure_type": "surgery",
+      "is_procedure": true,
+      "other_or_notes": "For evaluation and potential surgical intervention"
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": true,
+  "rationale": "The requested out-of-network consultation is not medically necessary as the condition can be evaluated and treated by in-network cardiac surgeons. The Health Plan's denial is upheld.",
+  "reviewer_credentials": null
+}

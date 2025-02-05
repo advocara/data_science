@@ -1,0 +1,45 @@
+{
+  "case_id": "MN08-8030",
+  "year": 2008,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Female"
+  },
+  "diagnosis": "Immuno Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Diag/ MD Eval",
+  "treatment_subcategory": "SCP Consult Refer",
+  "treatments_requested": [
+    {
+      "name": "Allergy Consultation",
+      "drug_type": null,
+      "procedure_type": "diagnostic",
+      "is_procedure": true,
+      "other_or_notes": "Requested for treatment of lupus and exposure to mold/mildew"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The physician reviewer found no clear relation between mold exposure and lupus. The patient's lupus is well-controlled, and there is no evidence of mold exposure worsening her condition. The allergist's recommendation falls into industrial hygiene and occupational medicine, and further allergy consultation is not required.",
+  "reviewer_credentials": null
+}
