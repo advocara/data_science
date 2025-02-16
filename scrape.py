@@ -2,7 +2,7 @@ import os
 from typing import List, Dict
 from cache import FileCache
 from imr_analyzer import IMRAnalyzer, IMRQuery
-from results.model.appeal import MedicalInsuranceAppeal
+from model.appeal import MedicalInsuranceAppeal
 from util import load_openai_key
 
 

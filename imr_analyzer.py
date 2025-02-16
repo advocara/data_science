@@ -9,7 +9,7 @@ import openai
 from openai import OpenAI
 
 from cache import FileCache  # Update import
-from results.model.appeal import GenderType, IMRRow, MedicalInsuranceAppeal, PatientInfo
+from model.appeal import GenderType, IMRRow, MedicalInsuranceAppeal, PatientInfo
 from util import get_openai_client, load_openai_key
 
 MAX_CASES = 20

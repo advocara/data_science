@@ -3,7 +3,7 @@
 """
 from typing import List
 
-from results.model.appeal import MedicalInsuranceAppeal
+from model.appeal import MedicalInsuranceAppeal
 
 import pandas as pd
 

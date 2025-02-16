@@ -7,7 +7,7 @@ from openai import OpenAI
 from openai.types.chat.completion_create_params import ResponseFormat
 from pydantic import BaseModel, Field, field_validator
 
-from results.model.appeal import MedicalInsuranceAppeal
+from model.appeal import MedicalInsuranceAppeal
 from util import get_openai_client, load_openai_key
 
 class TermMappingSet(BaseModel):
