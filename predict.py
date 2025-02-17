@@ -225,53 +225,50 @@ elif method == 'FPgrowth':
     # print("Rules overturned \n", rules_overturned.head(10))
 
 elif method == "deap":
-
-    X = df.drop(columns=['is_denial_upheld'])
-    denial = 'overturned'
-    if denial == 'upheld':
-        y = df['is_denial_upheld']# For denial upheld
-    else:
-        y = 1 - df['is_denial_upheld']# For denial overturned
+    X = df.drop(columns=['is_denial_upheld'])    
+    y = df['is_denial_upheld']
 
     # DEAP Setup
-    creator.create("FitnessMax", base.Fitness, weights=(1.0,))  # Maximize mutual info score
+    creator.create("FitnessMax", base.Fitness, weights=(1.0, 0.000001, 0.000001))  # Maximize mutual info score
     creator.create("Individual", list, fitness=creator.FitnessMax)
 
     # Hyperparameters
-    POP_SIZE = 10000
+    POP_SIZE = 5000
     NUM_GENERATIONS = 30
-    MUTATION_RATE = 0.5
+    MUTATION_RATE = 0.7
     CROSSOVER_RATE = 0.6
     TUPLE_MIN_SIZE = 2
     TUPLE_MAX_SIZE = 7
 
     # Initialize population with random feature tuples
     def generate_individual():
+        # Get unique columns (remove duplicates from X.columns)
+        unique_columns = list(dict.fromkeys(X.columns))  # preserves order unlike set()
+        
         tuple_size = random.randint(TUPLE_MIN_SIZE, TUPLE_MAX_SIZE)
-        return creator.Individual(random.sample(X.columns.tolist(), tuple_size))
+        # Ensure we don't exceed available unique features
+        tuple_size = min(tuple_size, len(unique_columns))
+        return creator.Individual(random.sample(unique_columns, tuple_size))
 
-    # Fitness function: Mutual Information with outcome (corrected)
     def evaluate(individual):
-        # Get selected features
         selected_features = list(individual)
-        df_selected = X[selected_features]
-        
-        # Create feature combinations string for each row
-        feature_combinations = []
-        
-        # Iterate through each row using itertuples for better performance
-        for row in df_selected.itertuples():
-            row_dict = row._asdict()
-            # Skip the Index which is always the first element
-            active_features = [col for col in selected_features if row_dict.get(col) == 1]
-            feature_str = '-'.join(active_features) if active_features else 'none'
-            feature_combinations.append(feature_str)
-        
-        # Calculate mutual information
-        mi_score = mutual_info_score(y, feature_combinations)
-        return (mi_score,)
+        # For upheld denials (class 1)
+        upheld_matches = df[((df[selected_features] == 1).all(axis=1)) & (df['is_denial_upheld'] == 1)].shape[0]
+        total_upheld = df[df['is_denial_upheld'] == 1].shape[0]
+        upheld_precision = upheld_matches / total_upheld if total_upheld > 0 else 0
 
-    # Mutation: Add or remove a feature randomly
+        # For overturned denials (class 0)
+        overturned_matches = df[((df[selected_features] == 1).all(axis=1)) & (df['is_denial_upheld'] == 0)].shape[0]
+        total_overturned = df[df['is_denial_upheld'] == 0].shape[0]
+        overturned_precision = overturned_matches / total_overturned if total_overturned > 0 else 0
+
+
+
+        # Calculate the absolute difference between precisions
+        # This rewards feature sets that strongly favor one class over the other
+        precision_difference = abs(upheld_precision - overturned_precision)
+        
+        return (precision_difference, upheld_precision, overturned_precision)
 
     def mutate(individual):
         if len(individual) == TUPLE_MAX_SIZE:
@@ -279,22 +276,84 @@ elif method == "deap":
             individual.pop(random.randint(0, len(individual)-1))
         elif len(individual) == TUPLE_MIN_SIZE:
             # If at min size, only allow addition 
-            new_feature = random.choice(list(set(X.columns) - set(individual)))
-            individual.append(new_feature)
+            available_features = list(set(X.columns) - set(individual))
+            if available_features:  # if there are features available to add
+                new_feature = random.choice(available_features)
+                individual.append(new_feature)
         else:
             # Randomly add or remove
             if random.random() < 0.5:
                 individual.pop(random.randint(0, len(individual)-1))
             else:
-                new_feature = random.choice(list(set(X.columns) - set(individual)))
-                individual.append(new_feature)
+                available_features = list(set(X.columns) - set(individual))
+                if available_features:
+                    new_feature = random.choice(available_features)
+                    individual.append(new_feature)
         return individual,
 
     # Crossover: Swap parts of two tuples
     def crossover(ind1, ind2):
-        point = random.randint(1, min(len(ind1), len(ind2))-1)
-        ind1[:point], ind2[:point] = ind2[:point], ind1[:point]
+        # Convert to sets to handle duplicates
+        set1 = set(ind1)
+        set2 = set(ind2)
+        
+        # Check if we have enough elements for crossover
+        if len(set1) < 2 or len(set2) < 2:
+            # If sets are too small, just return original individuals
+            return ind1, ind2
+        
+        # Random point for crossover
+        point = random.randint(1, min(len(set1), len(set2))-1)
+        
+        # Convert back to lists and perform crossover
+        list1 = list(set1)
+        list2 = list(set2)
+        list1[:point], list2[:point] = list2[:point], list1[:point]
+        
+        # Remove any duplicates and ensure minimum size
+        new_ind1 = list(dict.fromkeys(list1))
+        new_ind2 = list(dict.fromkeys(list2))
+        
+        # Ensure minimum size is maintained
+        while len(new_ind1) < TUPLE_MIN_SIZE:
+            available = list(set(X.columns) - set(new_ind1))
+            if available:
+                new_ind1.append(random.choice(available))
+                
+        while len(new_ind2) < TUPLE_MIN_SIZE:
+            available = list(set(X.columns) - set(new_ind2))
+            if available:
+                new_ind2.append(random.choice(available))
+        
+        ind1[:] = new_ind1
+        ind2[:] = new_ind2
+        
         return ind1, ind2
+
+    def make_unique_population(population, k):
+        # Convert individuals to tuples of features for hashability
+        seen = set()
+        unique_population = []
+        
+        for ind in population:
+            ind_tuple = tuple(sorted(ind))  # Sort to treat permutations as same
+            if ind_tuple not in seen:
+                seen.add(ind_tuple)
+                unique_population.append(ind)
+                if len(unique_population) == k:
+                    break
+        
+        # If we need more individuals, generate new ones
+        while len(unique_population) < k:
+            new_ind = toolbox.individual()
+            ind_tuple = tuple(sorted(new_ind))
+            if ind_tuple not in seen:
+                seen.add(ind_tuple)
+                # Evaluate new individual before adding
+                new_ind.fitness.values = toolbox.evaluate(new_ind)
+                unique_population.append(new_ind)
+        
+        return unique_population
 
     # Evolutionary Process
     toolbox = base.Toolbox()
@@ -303,7 +362,7 @@ elif method == "deap":
     toolbox.register("evaluate", evaluate)
     toolbox.register("mate", crossover)
     toolbox.register("mutate", mutate)
-    toolbox.register("select", tools.selTournament, tournsize=3)
+    toolbox.register("select", tools.selTournament, tournsize=random.randint(2, 4))
 
     # Run Evolution
     population = toolbox.population()
@@ -316,8 +375,11 @@ elif method == "deap":
         for ind, fit in zip(offspring, fits):
             ind.fitness.values = fit
 
-        population = toolbox.select(offspring, k=len(population))
-        
+        # First select based on fitness
+        selected = toolbox.select(offspring, k=len(population))
+        # Then ensure diversity
+        population = make_unique_population(selected, k=len(population))
+
         # Log best fitness of generation
         gen_fits = [ind.fitness.values[0] for ind in population]
         best_fitness.append(max(gen_fits))
@@ -333,7 +395,9 @@ elif method == "deap":
             results.append({
                 'Features': ', '.join(ind),
                 'Feature Count': len(ind),
-                'Mutual Information': ind.fitness.values[0]
+                'Fitness Score': ind.fitness.values[0],
+                'upheld_precision': ind.fitness.values[1],
+                'overturned_precision': ind.fitness.values[2]
             })
         
         results_df = pd.DataFrame(results)
@@ -342,11 +406,7 @@ elif method == "deap":
     results_df = analyze_results(population)
     print("\nTop Feature Combinations:")
     print(results_df)
-    denial = 'overturned'
-    if denial == 'upheld':
-        results_df.to_csv('deap_results_upheld.csv', index=False, sep=',', encoding='utf-8')# For denial upheld
-    else:
-        results_df.to_csv('deap_results_overturned.csv', index=False, sep=',', encoding='utf-8')# For denial overturned
+    results_df.to_csv('deap_results_newdash_eval.csv', index=False, sep=',', encoding='utf-8')
     
 
 
