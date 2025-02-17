@@ -229,7 +229,7 @@ elif method == "deap":
     y = df['is_denial_upheld']
 
     # DEAP Setup
-    creator.create("FitnessMax", base.Fitness, weights=(1.0, 0.000001, 0.000001))  # Maximize mutual info score
+    creator.create("FitnessMax", base.Fitness, weights=(1.0, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001))  # Maximize mutual info score
     creator.create("Individual", list, fitness=creator.FitnessMax)
 
     # Hyperparameters
@@ -262,13 +262,13 @@ elif method == "deap":
         total_overturned = df[df['is_denial_upheld'] == 0].shape[0]
         overturned_precision = overturned_matches / total_overturned if total_overturned > 0 else 0
 
-
+        total_matches_of_this_set = df[(df[selected_features] == 1).all(axis=1)].shape[0] 
 
         # Calculate the absolute difference between precisions
         # This rewards feature sets that strongly favor one class over the other
         precision_difference = abs(upheld_precision - overturned_precision)
         
-        return (precision_difference, upheld_precision, overturned_precision)
+        return (precision_difference, upheld_precision, upheld_matches, overturned_precision, overturned_matches, total_matches_of_this_set)
 
     def mutate(individual):
         if len(individual) == TUPLE_MAX_SIZE:
@@ -397,7 +397,10 @@ elif method == "deap":
                 'Feature Count': len(ind),
                 'Fitness Score': ind.fitness.values[0],
                 'upheld_precision': ind.fitness.values[1],
-                'overturned_precision': ind.fitness.values[2]
+                'upheld_count': ind.fitness.values[2],
+                'overturned_precision': ind.fitness.values[3],
+                'overturned_count': ind.fitness.values[4],
+                'total_matches_of_this_set': ind.fitness.values[5]
             })
         
         results_df = pd.DataFrame(results)
@@ -406,7 +409,7 @@ elif method == "deap":
     results_df = analyze_results(population)
     print("\nTop Feature Combinations:")
     print(results_df)
-    results_df.to_csv('deap_results_newdash_eval.csv', index=False, sep=',', encoding='utf-8')
+    results_df.to_csv('deap_results_newdashdash_eval.csv', index=False, sep=',', encoding='utf-8')
     
 
 
