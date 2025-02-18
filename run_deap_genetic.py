@@ -8,13 +8,15 @@ def run_deap(df, filename):
     y = df['is_denial_upheld']
 
     # DEAP Setup
-    creator.create("FitnessMax", base.Fitness, weights=(1.0, 0.000001, 0.000001, 0.000001, 0.000001, 0.02))  # Maximize mutual info score
+    # mostly weight the precision difference, but also want to boost cases that are common, and favor longer more explanatory feature sets
+    # e.g. if 5 appeals match a combination of 5 features, we want to report all 5, not just 3
+    creator.create("FitnessMax", base.Fitness, weights=(1.0, 0.000001, 0.000001, 0.000001, 0.000001, 0.02, 0.02))  # Maximize mutual info score
     creator.create("Individual", list, fitness=creator.FitnessMax)
 
     # Hyperparameters
-    POP_SIZE = 5000
+    POP_SIZE = 2000
     NUM_GENERATIONS = 30
-    MUTATION_RATE = 0.7
+    MUTATION_RATE = 0.4
     CROSSOVER_RATE = 0.6
     TUPLE_MIN_SIZE = 2
     TUPLE_MAX_SIZE = 7
@@ -31,6 +33,8 @@ def run_deap(df, filename):
 
     def evaluate(individual):
         selected_features = list(individual)
+        ind_len = len(selected_features)
+
         # For upheld denials (class 1)
         upheld_matches = df[((df[selected_features] == 1).all(axis=1)) & (df['is_denial_upheld'] == 1)].shape[0]
         total_upheld = df[df['is_denial_upheld'] == 1].shape[0]
@@ -47,7 +51,7 @@ def run_deap(df, filename):
         # This rewards feature sets that strongly favor one class over the other
         precision_difference = abs(upheld_precision - overturned_precision)
         
-        return (precision_difference, upheld_precision, upheld_matches, overturned_precision, overturned_matches, total_matches_of_this_set)
+        return (precision_difference, upheld_precision, upheld_matches, overturned_precision, overturned_matches, total_matches_of_this_set, ind_len)
 
     def mutate(individual):
         if len(individual) == TUPLE_MAX_SIZE:
@@ -72,6 +76,9 @@ def run_deap(df, filename):
 
     # Crossover: Swap parts of two tuples
     def crossover(ind1, ind2):
+        if random.random() < 0.3:
+            return crossover_addone(ind1, ind2)
+        
         # Convert to sets to handle duplicates
         set1 = set(ind1)
         set2 = set(ind2)
@@ -104,6 +111,28 @@ def run_deap(df, filename):
             if available:
                 new_ind2.append(random.choice(available))
         
+        ind1[:] = new_ind1
+        ind2[:] = new_ind2
+        
+        return ind1, ind2
+
+    def crossover_addone(ind1, ind2):
+        # Create copies to avoid modifying originals
+        new_ind1 = ind1[:]
+        new_ind2 = ind2[:]
+        
+        # For first individual: try to add one random feature from ind2
+        available_from_ind2 = list(set(ind2) - set(ind1))
+        if available_from_ind2 and len(new_ind1) < TUPLE_MAX_SIZE:
+            new_feature = random.choice(available_from_ind2)
+            new_ind1.append(new_feature)
+        
+        # For second individual: try to add one random feature from ind1
+        available_from_ind1 = list(set(ind1) - set(ind2))
+        if available_from_ind1 and len(new_ind2) < TUPLE_MAX_SIZE:
+            new_feature = random.choice(available_from_ind1)
+            new_ind2.append(new_feature)
+
         ind1[:] = new_ind1
         ind2[:] = new_ind2
         
@@ -154,7 +183,7 @@ def run_deap(df, filename):
     toolbox.register("individual", generate_individual)
     toolbox.register("population", tools.initRepeat, list, toolbox.individual, n=POP_SIZE)
     toolbox.register("evaluate", evaluate)
-    toolbox.register("mate", crossover)
+    toolbox.register("mate", crossover_addone)
     toolbox.register("mutate", mutate)
     toolbox.register("select", tools.selTournament, tournsize=random.randint(2, 4))
 
