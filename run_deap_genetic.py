@@ -8,7 +8,7 @@ def run_deap(df, filename):
     y = df['is_denial_upheld']
 
     # DEAP Setup
-    creator.create("FitnessMax", base.Fitness, weights=(1.0, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001))  # Maximize mutual info score
+    creator.create("FitnessMax", base.Fitness, weights=(1.0, 0.000001, 0.000001, 0.000001, 0.000001, 0.02))  # Maximize mutual info score
     creator.create("Individual", list, fitness=creator.FitnessMax)
 
     # Hyperparameters
@@ -145,24 +145,36 @@ def run_deap(df, filename):
 
     # Run Evolution
     population = toolbox.population()
+    fits = list(map(toolbox.evaluate, population))
+    for ind, fit in zip(population, fits):
+        ind.fitness.values = fit
+
     best_fitness = []
 
     for gen in range(NUM_GENERATIONS):
+        top_20_individuals = sorted(population, key=lambda ind: ind.fitness.values[0], reverse=True)[:20]
+
         offspring = algorithms.varAnd(population, toolbox, CROSSOVER_RATE, MUTATION_RATE)
+
         fits = list(map(toolbox.evaluate, offspring))
         
         for ind, fit in zip(offspring, fits):
             ind.fitness.values = fit
 
         # First select based on fitness
-        selected = toolbox.select(offspring, k=len(population))
+        selected = toolbox.select(offspring, k=len(population)-20)
+
+        # appended = top_20_individuals + offspring
+
         # Then ensure diversity
-        population = make_unique_population(selected, k=len(population))
+        population = top_20_individuals + make_unique_population(selected, k=len(population)-20)
 
         # Log best fitness of generation
         gen_fits = [ind.fitness.values[0] for ind in population]
         best_fitness.append(max(gen_fits))
-        print(f"Generation {gen}: Best Fitness = {best_fitness[-1]:.4f}")
+        top_10 = sorted(gen_fits, reverse=True)[:10]
+        print(f"Generation {gen}: Best Fitness = {best_fitness[-1]:.4f}----------------------------average of top 10 gen fits = {sum(top_10)/len(top_10):.4f}")
+        print()
 
     def analyze_results(population):
     # Sort by fitness

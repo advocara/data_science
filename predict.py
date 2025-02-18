@@ -154,4 +154,4 @@ elif method == "deap":
     # print(df[(df['guidelines_support'] == 0) & (df['guidelines_not_support'] == 0)])
     df['soc_absent'] = ((df['soc_support'] == 0) & (df['soc_not_support'] == 0)).astype(int)
     df['guidelines_absent'] = ((df['guidelines_support'] == 0) & (df['guidelines_not_support'] == 0)).astype(int)
-    run_deap(df, 'deap_results_support_absent.csv')
+    run_deap(df, 'deap_results_support_absent_elitism_new.csv')
