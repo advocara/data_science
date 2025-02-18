@@ -89,7 +89,7 @@ def train_random_forest(X, y):
 
 # Load JSON files from cache directory
 medical_appeals = []
-normalized_appeal_dir = "D:\\Advocara\\data_science\\appeals-results"
+normalized_appeal_dir = os.getcwd()+"/appeals-results"
 category_substring = "Immuno Disorders-Lupus-norm"
 
 # Read all JSON files in cache directory

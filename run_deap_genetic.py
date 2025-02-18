@@ -134,6 +134,21 @@ def run_deap(df, filename):
         
         return unique_population
 
+    def score_pop(population, toolbox):
+        """Score a population of individuals using the toolbox evaluator.
+        
+        Args:
+            population: List of individuals to evaluate
+            toolbox: DEAP toolbox containing the evaluate function
+            
+        Returns:
+            The same population with updated fitness values
+        """
+        fits = list(map(toolbox.evaluate, population))
+        for ind, fit in zip(population, fits):
+            ind.fitness.values = fit
+        return population
+    
     # Evolutionary Process
     toolbox = base.Toolbox()
     toolbox.register("individual", generate_individual)
@@ -143,31 +158,26 @@ def run_deap(df, filename):
     toolbox.register("mutate", mutate)
     toolbox.register("select", tools.selTournament, tournsize=random.randint(2, 4))
 
+
     # Run Evolution
     population = toolbox.population()
-    fits = list(map(toolbox.evaluate, population))
-    for ind, fit in zip(population, fits):
-        ind.fitness.values = fit
+    population = score_pop(population, toolbox)  # Replace the manual scoring
 
     best_fitness = []
 
     for gen in range(NUM_GENERATIONS):
-        top_20_individuals = sorted(population, key=lambda ind: ind.fitness.values[0], reverse=True)[:20]
 
         offspring = algorithms.varAnd(population, toolbox, CROSSOVER_RATE, MUTATION_RATE)
-
-        fits = list(map(toolbox.evaluate, offspring))
-        
-        for ind, fit in zip(offspring, fits):
-            ind.fitness.values = fit
+        offspring = score_pop(offspring, toolbox)
 
         # First select based on fitness
-        selected = toolbox.select(offspring, k=len(population)-20)
+        best_offspring = toolbox.select(offspring, k=len(population)-20)
 
-        # appended = top_20_individuals + offspring
-
+        # Keep the top 20 elite individuals
+        top_20_individuals = sorted(population, key=lambda ind: ind.fitness.values[0], reverse=True)[:20]
+        new_population = top_20_individuals + make_unique_population(best_offspring, k=len(population)-20)
         # Then ensure diversity
-        population = top_20_individuals + make_unique_population(selected, k=len(population)-20)
+        population = make_unique_population(new_population, k=len(population))
 
         # Log best fitness of generation
         gen_fits = [ind.fitness.values[0] for ind in population]
