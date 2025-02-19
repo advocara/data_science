@@ -44,6 +44,11 @@ def run_deap(df, filename):
 
         # Generate masks (one dim column vectors) for feature/upheld combinations
         mask_all_features = (relevant_columns_df[selected_features] == 1).all(axis=1) # one-dim column with true if all features are 1
+        
+        # if nothing has all the features, skip later filtering
+        if not mask_all_features.any():
+            return (0, 0, 0, 0, 0, 0, 0)
+        
         mask_upheld_with_all_features = mask_all_features & (df['is_denial_upheld'] == 1) # one-dim column with true if above and also upheld
         mask_overturned_with_all_features = mask_all_features & (df['is_denial_upheld'] == 0) # one-dim column with true if above and also overturned
         

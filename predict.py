@@ -152,8 +152,6 @@ elif method == "deap":
     # for col in df.columns:
     #     print(col)
 
-    input("\nWaiting.  Press Enter to continue...")
-
     # print(df[(df['guidelines_support'] == 0) & (df['guidelines_not_support'] == 0)])
     df['soc_absent'] = ((df['soc_support'] == 0) & (df['soc_not_support'] == 0)).astype(int)
     df['guidelines_absent'] = ((df['guidelines_support'] == 0) & (df['guidelines_not_support'] == 0)).astype(int)
