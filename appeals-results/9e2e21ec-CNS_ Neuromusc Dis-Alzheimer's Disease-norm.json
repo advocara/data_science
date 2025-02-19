@@ -1,0 +1,51 @@
+{
+  "case_id": "MN23-38780",
+  "year": 2023,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Male"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Leqembi Infusions",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Phase III Trial on Leqembi",
+      "study_authors": "Van Dyck, et al.",
+      "key_findings": "Leqembi reduced markers of amyloid in early Alzheimer's patients but was linked with adverse events. Additional trials needed for safety and efficacy."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested Leqembi Solution infusions are not medically necessary as the patient refused cerebrospinal fluid testing and no amyloid PET documentation was provided. The medication's safety and efficacy require further trials.",
+  "reviewer_credentials": "Board certified in neurology with subspecialty in vascular neurology, actively practicing, expert in treating Alzheimer's disease."
+}

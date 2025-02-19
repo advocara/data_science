@@ -1,0 +1,47 @@
+{
+  "case_id": "EI18-27871",
+  "year": 2018,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "Lab Work",
+  "treatments_requested": [
+    {
+      "name": "Laboratory Testing",
+      "drug_type": null,
+      "procedure_type": "diagnostic",
+      "is_procedure": true,
+      "other_or_notes": "Experimental/Investigational"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Current literature fails to demonstrate the superior effectiveness of the services at issue. No reliable clinical markers or diagnostic tests can predict the likelihood that an individual patient with mild cognitive impairment will develop dementia.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Mild cognitive impairment is a diagnosis made on clinical findings. Laboratory testing was not likely to have been superior over other methods of evaluation.",
+  "study_support": false,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": false,
+  "rationale": "The services at issue were not likely to be more beneficial for evaluation of the patient\u2019s medical condition than any available standard therapy. Therefore, the Health Plan\u2019s denial should be upheld.",
+  "reviewer_credentials": "Physician reviewers 1, 2, and 3 are board certified in internal medicine and are actively practicing. They are experts in the treatment of the enrollee\u2019s medical condition and knowledgeable about the proposed treatment through recent or current actual clinical experience."
+}

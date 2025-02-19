@@ -1,0 +1,68 @@
+{
+  "case_id": "EI10-11425",
+  "year": 2010,
+  "patient_info": {
+    "age_range": "65+",
+    "gender": "Male"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Mental Health",
+  "treatment_subcategory": "Cognitive Therapy",
+  "treatments_requested": [
+    {
+      "name": "Cognitive Rehabilitation Therapy",
+      "drug_type": null,
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Experimental/Investigational"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Anticholinergic Medications",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    },
+    {
+      "name": "Memantine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Available literature endorses use of anticholinergic medications and memantine for Alzheimer's disease, with no substantial evidence supporting cognitive rehabilitation therapy.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Standards of care suggest maintaining physical activity and cognitively stimulating activities, but do not support cognitive rehabilitation therapy for Alzheimer's.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Reality Orientation Therapy",
+      "study_authors": "Not specified",
+      "key_findings": "Benefits maintained by continuation of therapy by caregiver, but not substantial evidence for cognitive rehabilitation therapy."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": false,
+  "rationale": "The decision to uphold the denial was based on the lack of substantial evidence supporting the efficacy of cognitive rehabilitation therapy for Alzheimer's disease, as well as the endorsement of alternative treatments such as anticholinergic medications and memantine.",
+  "reviewer_credentials": null
+}

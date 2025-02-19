@@ -1,0 +1,53 @@
+{
+  "case_id": "EI08-8204",
+  "year": 2008,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "PET Scan",
+  "treatments_requested": [
+    {
+      "name": "PET Scan",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": "Experimental/Investigational"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "diagnosis"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "PET Scanning for Alzheimer's Diagnosis",
+      "study_authors": "Two physician reviewers",
+      "key_findings": "Data supports the use of PET scanning to assist in diagnosis and treatment planning."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "confirm_diagnosis"
+  ],
+  "expedited": false,
+  "rationale": "The decision was overturned as the PET scan is supported by data to assist in diagnosis and treatment planning for Alzheimer's Disease.",
+  "reviewer_credentials": null
+}

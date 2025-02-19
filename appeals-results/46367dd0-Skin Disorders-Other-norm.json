@@ -1,0 +1,67 @@
+{
+  "case_id": "MN24-41532",
+  "year": 2024,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Skin Disorders",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Elect/Therm/Radfreq",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "MiraDry",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Microwave thermolysis for hyperhidrosis"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [
+    {
+      "name": "Botox",
+      "drug_type": "biologic",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Used for axillary hyperhidrosis"
+    }
+  ],
+  "treatments_not_tried": [
+    {
+      "name": "Topical agents",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Aluminum chloride and topical glycopyrronium"
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Current medical literature supports the use of Botox for axillary hyperhidrosis. MiraDry is not indicated as the patient has not failed Botox treatment.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Standards of care recommend starting with topical antiperspirants and then proceeding to Botox before device use like MiraDry.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Comparative study of treatments for axillary hyperhidrosis",
+      "study_authors": "Multiple clinical trials",
+      "key_findings": "Botox had the best evidence for efficacy compared to microwave thermolysis."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The requested MiraDry procedure is not medically necessary as the patient has not failed Botox treatment, which is supported by current medical literature and standards of care.",
+  "reviewer_credentials": "Board certified in dermatology, actively practicing, expert in treatment of hyperhidrosis."
+}

@@ -1,0 +1,50 @@
+{
+  "case_id": "EI15-19529",
+  "year": 2015,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Male"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "memory disturbance",
+    "cognitive impairment"
+  ],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "PET Scan",
+  "treatments_requested": [
+    {
+      "name": "PET Scan",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": "Requested for medical evaluation of memory disturbance."
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "diagnosis"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "The use of PET scan is beneficial in differentiating Alzheimer's disease from frontotemporal dysplasia.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "confirm_diagnosis"
+  ],
+  "expedited": false,
+  "rationale": "The PET scan is likely to be more beneficial for evaluating the patient's medical condition than any available standard therapy, as it helps in establishing the diagnosis of Alzheimer's disease.",
+  "reviewer_credentials": null
+}

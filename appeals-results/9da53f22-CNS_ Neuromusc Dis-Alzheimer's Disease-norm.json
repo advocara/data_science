@@ -1,0 +1,50 @@
+{
+  "case_id": "MN15-19648",
+  "year": 2015,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "memory disturbance",
+    "requires assistance",
+    "requires assistance",
+    "requires assistance"
+  ],
+  "treatment_category": "Pharmacy",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "Memantine",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": null,
+  "guidelines_details": "According to the Alzheimer\u2019s Association, the patient's symptoms support a diagnosis of moderate Alzheimer\u2019s, which supports the use of Namenda.",
+  "soc_support": true,
+  "soc_not_support": null,
+  "soc_details": "The use of Namenda is supported for moderate Alzheimer's disease.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested Namenda XR is medically necessary for the treatment of the patient's Alzheimer's disease, as supported by the Alzheimer's Association guidelines and the patient's symptoms indicating moderate Alzheimer's.",
+  "reviewer_credentials": null
+}

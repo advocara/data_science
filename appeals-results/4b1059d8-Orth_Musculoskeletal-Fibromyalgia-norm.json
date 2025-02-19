@@ -1,0 +1,60 @@
+{
+  "case_id": "MN24-41478",
+  "year": 2024,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "Orth/Musculoskeletal",
+  "secondary_conditions": [
+    "degenerative disc disease",
+    "stenosis",
+    "myofascial pain"
+  ],
+  "complications": [],
+  "symptoms": [
+    "neck pain",
+    "upper back pain",
+    "lower back pain",
+    "knee discomfort"
+  ],
+  "treatment_category": "Alternative Tx",
+  "treatment_subcategory": "Other",
+  "treatments_requested": [
+    {
+      "name": "massage",
+      "drug_type": null,
+      "procedure_type": "physical_therapy",
+      "is_procedure": true,
+      "other_or_notes": null
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "There is a lack of medical literature indicating that massage therapy is superior to standard treatment, such as physical therapy and medication, in terms of pain relief and improving function.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Massage therapy effects are of short duration and not superior to standard treatments.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Medical literature on massage therapy for chronic musculoskeletal pain",
+      "study_authors": "Various",
+      "key_findings": "Massage therapy has short-term effects and is not superior to standard treatments."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": true,
+  "rationale": "The requested massage therapy is not medically necessary as it is not superior to standard treatments like physical therapy and medication.",
+  "reviewer_credentials": "Board certified in physical medicine and rehabilitation, actively practicing, expert in the treatment of the enrollee\u2019s medical condition."
+}

@@ -1,0 +1,55 @@
+{
+  "case_id": "MN18-27525",
+  "year": 2018,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "memory disturbance"
+  ],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "PET Scan",
+  "treatments_requested": [
+    {
+      "name": "Brain PET Scan",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": "CPT 78608"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Head CT or MRI",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": "Recommended by American Academy of Neurology"
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "American Academy of Neurology recommends structural neuroimaging with non-contrast head CT or MRI for initial evaluation of memory loss, not PET scan.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "PET scan is not part of the recommended work up for memory loss without documented evidence of dementia.",
+  "study_support": false,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The PET scan was not deemed medically necessary as the patient's history, physical examination, and work up did not indicate its need. The American Academy of Neurology guidelines do not support PET scan for initial evaluation of memory loss without evidence of dementia.",
+  "reviewer_credentials": "Board certified in neurology, actively practicing, expert in treatment of Alzheimer's Disease."
+}
