@@ -138,7 +138,7 @@ def store_normalized_appeals(category_substring: str) -> None:
     Read appeals from cache, normalize names, and store in appeals-results directory.
     
     Args:
-        category_substring: String to match in cache filenames (e.g., 'Immuno Disorders_Lupus' for lupus appeals)
+        category_substring: String to match in cache filenames (e.g., 'Immuno Disorders-Lupus' for lupus appeals)
     """
     # Setup paths and create output directory
     cache_dir = './cache'

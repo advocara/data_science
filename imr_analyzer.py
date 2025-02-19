@@ -18,11 +18,11 @@ CHUNK_SIZE = 4
 @dataclass
 class IMRQuery:
     """Class to hold query parameters for filtering IMR cases"""
-    diagnosis_category: Optional[str] = None
-    diagnosis_subcategory: Optional[str] = None
-    determination: Optional[str] = None
-    treatment_category: Optional[str] = None
-    treatment_subcategory: Optional[str] = None
+    diagnosis_category: Optional[str] = ""
+    diagnosis_subcategory: Optional[str] = ""
+    determination: Optional[str] = ""
+    treatment_category: Optional[str] = ""
+    treatment_subcategory: Optional[str] = ""
     year: Optional[int] = None
 
 class IMRAnalyzer:
@@ -127,7 +127,7 @@ class IMRAnalyzer:
 
         assert isinstance(mia, MedicalInsuranceAppeal)
         # Cache the successful result as the object JSON form
-        self.cache.put(full_text, mia.model_dump_json(), dataset_name)
+        self.cache.put(full_text, mia.model_dump_json(), f'{imr.diagnosis_category}-{imr.diagnosis_sub_category}')
 
         print(f"Extracted and cached case {mia.case_id}")
 

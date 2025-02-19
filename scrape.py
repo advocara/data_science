@@ -8,9 +8,9 @@ from util import load_openai_key
 
 def main():
     # Configure parameters
-    input_csv = "data/ca-imr-determinations.csv"
+    input_csv = "data\ca-imr-determinations.csv"
     start_record = 0  # Start from first record
-    max_records = 200  # Process lmit of records
+    max_records = 37000  # Process lmit of records
     chunk_size = 4    # Process in chunks of 4
     
     print(f"======= \n======= Processing {max_records} cases starting from record {start_record} \n=======")
@@ -20,6 +20,7 @@ def main():
         api_key = load_openai_key()
         print("Successfully loaded OpenAI API key")
     except FileNotFoundError:
+        print(os.path.expanduser('~'))
         print("Error: Please create ~/openai.key file with your OpenAI API key")
         return
     
@@ -30,8 +31,8 @@ def main():
     query = IMRQuery(
         # diagnosis_category="Immuno Disorders",
         # diagnosis_subcategory="Lupus"
-        diagnosis_category="Skin Disorders",
-        diagnosis_subcategory="Eczema"
+        # diagnosis_category="Alzheimer's Disease",
+        diagnosis_subcategory="Fibromyalgia"
     )
     dataset_name = f'{query.diagnosis_category}-{query.diagnosis_subcategory}'
 
