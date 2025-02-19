@@ -35,20 +35,26 @@ def run_deap(df, filename):
         selected_features = list(individual)
         ind_len = len(selected_features)
 
-        # For upheld denials (class 1)
-        upheld_matches = df[((df[selected_features] == 1).all(axis=1)) & (df['is_denial_upheld'] == 1)].shape[0]
-        total_upheld = df[df['is_denial_upheld'] == 1].shape[0]
+        # Create smaller df with just the selected features and upheld flag. We never need other columns.
+        relevant_columns_df = df[selected_features + ['is_denial_upheld']]
+        
+        # first compute total upheld and overturned regardless of features (TODO cache these numbers)
+        total_upheld = (relevant_columns_df['is_denial_upheld'] == 1).sum()
+        total_overturned = len(relevant_columns_df) - total_upheld
+
+        # Generate masks (one dim column vectors) for feature/upheld combinations
+        mask_all_features = (relevant_columns_df[selected_features] == 1).all(axis=1) # one-dim column with true if all features are 1
+        mask_upheld_with_all_features = mask_all_features & (df['is_denial_upheld'] == 1) # one-dim column with true if above and also upheld
+        mask_overturned_with_all_features = mask_all_features & (df['is_denial_upheld'] == 0) # one-dim column with true if above and also overturned
+        
+        # Count matches by summing the boolean masks directly (no need to build new data frames)
+        total_matches_of_this_set = mask_all_features.sum() # count the True values in the mask
+        upheld_matches = mask_upheld_with_all_features.sum()
+        overturned_matches = mask_overturned_with_all_features.sum()
+
+        # compute precision
         upheld_precision = upheld_matches / total_upheld if total_upheld > 0 else 0
-
-        # For overturned denials (class 0)
-        overturned_matches = df[((df[selected_features] == 1).all(axis=1)) & (df['is_denial_upheld'] == 0)].shape[0]
-        total_overturned = df[df['is_denial_upheld'] == 0].shape[0]
         overturned_precision = overturned_matches / total_overturned if total_overturned > 0 else 0
-
-        total_matches_of_this_set = df[(df[selected_features] == 1).all(axis=1)].shape[0] 
-
-        # Calculate the absolute difference between precisions
-        # This rewards feature sets that strongly favor one class over the other
         precision_difference = abs(upheld_precision - overturned_precision)
         
         return (precision_difference, upheld_precision, upheld_matches, overturned_precision, overturned_matches, total_matches_of_this_set, ind_len)
@@ -244,9 +250,9 @@ def run_deap(df, filename):
 
 
 # Plot fitness history
-    import matplotlib.pyplot as plt
-    plt.plot(best_fitness)
-    plt.title('Best Fitness Score by Generation')
-    plt.xlabel('Generation')
-    plt.ylabel('Fitness Score (Mutual Information)')
-    plt.show()
+    # import matplotlib.pyplot as plt
+    # plt.plot(best_fitness)
+    # plt.title('Best Fitness Score by Generation')
+    # plt.xlabel('Generation')
+    # plt.ylabel('Fitness Score (Mutual Information)')
+    # plt.show()

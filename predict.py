@@ -91,6 +91,7 @@ def train_random_forest(X, y):
 medical_appeals = []
 normalized_appeal_dir = os.getcwd()+"/appeals-results"
 category_substring = "Immuno Disorders-Lupus-norm"
+# category_substring = "Skin Disorders-Eczema"
 
 # Read all JSON files in cache directory
 for json_file in glob.glob(os.path.join(normalized_appeal_dir, f"*{category_substring}*.json")):
@@ -150,6 +151,8 @@ elif method == 'FPgrowth':
 elif method == "deap":
     # for col in df.columns:
     #     print(col)
+
+    input("\nWaiting.  Press Enter to continue...")
 
     # print(df[(df['guidelines_support'] == 0) & (df['guidelines_not_support'] == 0)])
     df['soc_absent'] = ((df['soc_support'] == 0) & (df['soc_not_support'] == 0)).astype(int)

@@ -28,15 +28,17 @@ def main():
     
     # Create query for Lupus cases
     query = IMRQuery(
-        diagnosis_category="Immuno Disorders",
-        diagnosis_subcategory="Lupus"
+        # diagnosis_category="Immuno Disorders",
+        # diagnosis_subcategory="Lupus"
+        diagnosis_category="Skin Disorders",
+        diagnosis_subcategory="Eczema"
     )
     dataset_name = f'{query.diagnosis_category}-{query.diagnosis_subcategory}'
 
     # Find matching cases
     matches = analyzer.find_matching_cases(query, start_record=start_record, max_records=max_records)
     total_found = len(analyzer.find_matching_cases(query))  # Get total without limits
-    print(f"\nFound {total_found} total cases matching Lupus under Immuno Disorders")
+    print(f"\nFound {total_found} total cases matching {dataset_name}")
     print(f"Processing {len(matches)} cases starting from record {start_record}")
     
     if len(matches) == 0:
