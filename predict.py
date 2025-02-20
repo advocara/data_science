@@ -152,6 +152,8 @@ def predict(query: IMRQuery, method: str, result_file_name: str = 'deap_results_
         run_FP(df)
 
     elif method == "deap":
+        
+        os.makedirs("./deap-results", exist_ok=True)
         # for col in df.columns:
         #     print(col)
 
