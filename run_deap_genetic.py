@@ -201,7 +201,7 @@ def run_deap(df, filename):
                 if fit_aspirants:
                     # If we found fit individuals, select the best one
                     chosen.append(max(fit_aspirants, key=lambda ind: ind.fitness.values[0]))
-                    print('fitval = ', max(aspirants, key=lambda ind: ind.fitness.values[0]).fitness.values[0])
+                    # print('fitval = ', max(aspirants, key=lambda ind: ind.fitness.values[0]).fitness.values[0])
                     break
             else:
                 # If we didn't find any fit individuals after max_attempts, take best from last tournament
@@ -231,7 +231,14 @@ def run_deap(df, filename):
         offspring = score_pop(offspring, toolbox)
 
         # First select based on fitness
-        best_offspring = toolbox.select(offspring, k=len(population)-ELITE_SIZE)
+        # best_offspring = toolbox.select(offspring, k=len(population)-ELITE_SIZE)
+        fit_offspring = [ind for ind in offspring if ind.fitness.values[0] > 0.5]  # Minimum fitness threshold
+
+        if len(fit_offspring) > 0:
+            best_offspring = toolbox.select(fit_offspring, k=len(population)-ELITE_SIZE)
+        else:
+            # If no fit offspring, select from current population
+            best_offspring = toolbox.select(population, k=len(population)-ELITE_SIZE)
 
         # Keep the top 20 elite individuals
         top_elite_individuals = sorted(population, key=lambda ind: ind.fitness.values[0], reverse=True)[:ELITE_SIZE]
