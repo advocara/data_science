@@ -1,0 +1,56 @@
+{
+  "case_id": "EI07-6834",
+  "year": 2007,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Male"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "PET Scan",
+  "treatments_requested": [
+    {
+      "name": "Brain PET Scan",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": "Requested for evaluation of possible dementia"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [
+    {
+      "name": "Brain CT Scan",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": "Suggested to screen for structural causes of dementia"
+    }
+  ],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "diagnosis",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "confirm_diagnosis"
+  ],
+  "expedited": false,
+  "rationale": "The request for a brain PET scan was denied as the patient's symptoms do not align with typical presentations of fronto-temporal dementia. Imaging with CT or MRI is standard for screening treatable causes of dementia, but MRI is not suitable due to the patient's pacemaker. A CT scan, not documented in the records, could be beneficial to rule out structural causes of dementia.",
+  "reviewer_credentials": null
+}

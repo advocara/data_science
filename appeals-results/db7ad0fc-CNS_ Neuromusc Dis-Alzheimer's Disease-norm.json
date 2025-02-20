@@ -1,0 +1,53 @@
+{
+  "case_id": "EI17-25709",
+  "year": 2017,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Male"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "Lab Work",
+  "treatments_requested": [
+    {
+      "name": "Genetic Testing",
+      "drug_type": null,
+      "procedure_type": "diagnostic",
+      "is_procedure": true,
+      "other_or_notes": "Genetic tests on two dates of service"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "Genetic testing of APOE may be considered for inheritance risk assessment among children but not for treatment outcome guidance for carriers.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "Genetic testing does not provide treatment outcome guidance for carriers without inheritance risk.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Peer-reviewed medical literature",
+      "study_authors": "Various researchers",
+      "key_findings": "Genetic testing of APOE may be considered for inheritance risk assessment among children but not for treatment outcome guidance for carriers."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "plan_coverage"
+  ],
+  "expedited": false,
+  "rationale": "The genetic tests performed were not likely to be more beneficial for evaluation of the patient\u2019s medical condition than any available standard therapy. No risk of inheritance was noted, and the tests do not provide treatment outcome guidance for carriers.",
+  "reviewer_credentials": "Three physician reviewers, all board certified in neurology, with one having sub-specialty certification in pain medicine. All are actively practicing and experts in the treatment of the enrollee\u2019s medical condition."
+}

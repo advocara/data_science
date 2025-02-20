@@ -1,0 +1,62 @@
+{
+  "case_id": "EI08-9011",
+  "year": 2008,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "cognitive impairment",
+    "cognitive impairment"
+  ],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "PET Scan",
+  "treatments_requested": [
+    {
+      "name": "PET Scan",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": "Requested for evaluation of cognitive and psychomotor slowing"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "diagnosis",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": false,
+  "guidelines_not_support": true,
+  "guidelines_details": "No adequate standards to judge PET scan results in differential diagnosis of cognitive impairment.",
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "No therapeutic implications addressed by PET scanning in this case.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Study by Matsuda",
+      "study_authors": "Matsuda",
+      "key_findings": "No adequate standards to judge PET scan results in differential diagnosis of cognitive impairment."
+    },
+    {
+      "study_name": "Study by Jagust and colleagues",
+      "study_authors": "Jagust and colleagues",
+      "key_findings": "No therapeutic implications addressed by PET scanning in this case."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "confirm_diagnosis"
+  ],
+  "expedited": false,
+  "rationale": "The proposed PET scan is not indicated due to lack of clinical value and absence of adequate standards for differential diagnosis in this setting.",
+  "reviewer_credentials": null
+}

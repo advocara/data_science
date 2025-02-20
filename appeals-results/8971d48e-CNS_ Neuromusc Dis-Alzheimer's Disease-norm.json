@@ -1,0 +1,58 @@
+{
+  "case_id": "MN17-26270",
+  "year": 2017,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Male"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "cognitive impairment",
+    "altered mental status",
+    "requires assistance",
+    "requires assistance"
+  ],
+  "treatment_category": "Acute Med Svc Inpt",
+  "treatment_subcategory": "Admission",
+  "treatments_requested": [
+    {
+      "name": "Psychiatric Inpatient Services",
+      "drug_type": null,
+      "procedure_type": "other",
+      "is_procedure": true,
+      "other_or_notes": "Reimbursement for inpatient psychiatric services for behavioral health condition"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [
+    {
+      "name": "Haloperidol",
+      "drug_type": "standard",
+      "procedure_type": null,
+      "is_procedure": false,
+      "other_or_notes": "Increased dosage led to patient being calmer and cooperative"
+    }
+  ],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The services were deemed medically necessary for the treatment of the patient's condition. The patient showed improvement with increased Haldol dosage and did not require ongoing inpatient hospitalization.",
+  "reviewer_credentials": "Board certified in psychiatry with sub-specialty certification in geriatric psychiatry, actively practicing, expert in treatment of Alzheimer's Disease."
+}

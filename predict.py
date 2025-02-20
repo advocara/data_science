@@ -9,9 +9,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 
+
 from random_forest_paths import extract_multi_feature_paths, analyze_feature_impact, format_impact_analysis, FeatureImpact
-from results.model.appeal import MedicalInsuranceAppeal
+
+from imr_analyzer import IMRAnalyzer, IMRQuery
+from model.appeal import MedicalInsuranceAppeal
 from term_normalizer import Normalizer
+
+from run_FPGrowth import run_FP
+from run_deap_genetic import run_deap
+
 
 def appeals_as_dataframe_onehot(records):
     """Convert JSON-based medical appeal records into a structured DataFrame."""
@@ -82,56 +89,75 @@ def train_random_forest(X, y):
     return clf, X_train, X_test, y_train, y_test
 
 
-# Load JSON files from cache directory
-medical_appeals = []
-normalized_appeal_dir = "appeals-results"
-category_substring = "Immuno Disorders-Lupus-norm"
+def predict(query: IMRQuery, method: str, result_file_name: str = 'deap_results_support_absent_elitism_selecttourn.csv'):
+    # Load JSON files from cache directory
+    medical_appeals = []
+    normalized_appeal_dir = os.getcwd()+"/appeals-results"
+    category_substring = f'{query.diagnosis_category}-{query.diagnosis_subcategory}' + '-norm'
+    # category_substring = "Skin Disorders-Eczema"
 
-# Read all JSON files in cache directory
-for json_file in glob.glob(os.path.join(normalized_appeal_dir, f"*{category_substring}*.json")):
-    with open(json_file, 'r') as f:
-        medical_appeals.append(MedicalInsuranceAppeal.model_validate(json.load(f)))
+    # Read all JSON files in cache directory
+    for json_file in glob.glob(os.path.join(normalized_appeal_dir, f"*{category_substring}*.json")):
+        with open(json_file, 'r') as f:
+            medical_appeals.append(MedicalInsuranceAppeal.model_validate(json.load(f)))
 
-print(f"Loaded {len(medical_appeals)} medical appeal records for: {category_substring}")
+    print(f"Loaded {len(medical_appeals)} medical appeal records for: {category_substring}")
 
-#### Convert to a dataframe with categories flattened as one-hot encoded columns ####
-medical_appeal_dicts = [appeal.model_dump() for appeal in medical_appeals]
-df = appeals_as_dataframe_onehot(medical_appeal_dicts) # convert back to dict now that name normalization is done
+    #### Convert to a dataframe with categories flattened as one-hot encoded columns ####
+    medical_appeal_dicts = [appeal.model_dump() for appeal in medical_appeals]
+    df = appeals_as_dataframe_onehot(medical_appeal_dicts) # convert back to dict now that name normalization is done
 
-#### Prepare features and target ####
-X = df.drop(columns=["is_denial_upheld"])
-y = df["is_denial_upheld"]
+    # method = "deap"
 
-# Train model
-model, X_train, X_test, y_train, y_test = train_random_forest(X, y)
+    if method == "random_forest":
+        #### Prepare features and target ####
+        X = df.drop(columns=["is_denial_upheld"])
+        y = df["is_denial_upheld"]
+        # Train model
+        model, X_train, X_test, y_train, y_test = train_random_forest(X, y)
 
-# Feature Importance
-feature_importances = model.feature_importances_
+        # Feature Importance
+        feature_importances = model.feature_importances_
 
-### Plot single-feature importance and display bar chart ###
-# plt.barh(X.columns, feature_importances)
-# plt.xlabel("Feature Importance")
-# plt.ylabel("Feature")
-# plt.title("Random Forest Feature Importance in Medical Appeals Prediction")
-# plt.show()
-#### ======
+        ### Plot single-feature importance and display bar chart ###
+        # plt.barh(X.columns, feature_importances)
+        # plt.xlabel("Feature Importance")
+        # plt.ylabel("Feature")
+        # plt.title("Random Forest Feature Importance in Medical Appeals Prediction")
+        # plt.show()
+        #### ======
 
-# **Use our path counting module for Feature Path Analysis**
-print("\n\n\n\n\n===\n===\n=== Feature Impact Analysis ===")
-impact_metrics: Dict[Tuple[str, ...], FeatureImpact] = analyze_feature_impact(model, X, min_occurrences=5, max_path_length=3)
-results = format_impact_analysis(impact_metrics, top_n=50)
+        # **Use our path counting module for Feature Path Analysis**
+        print("\n\n\n\n\n===\n===\n=== Feature Impact Analysis ===")
+        impact_metrics: Dict[Tuple[str, ...], FeatureImpact] = analyze_feature_impact(model, X, min_occurrences=5, max_path_length=3)
+        results = format_impact_analysis(impact_metrics, top_n=50)
 
-print("\nMost Impactful Feature Combinations:")
-print("------------------------------------")
-for result in results:
-    print(result)
-    print("------------------------------------")
+        print("\nMost Impactful Feature Combinations:")
+        print("------------------------------------")
+        for result in results:
+            print(result)
+            print("------------------------------------")
+
+        # print("\n--- Most Common Multi-Feature Pathways ---")
+        # common_combinations = random_forests_paths.extract_feature_combinations(model, X.columns)
+        # for features, count in common_combinations.items():
+        #     print(f"{features} (Appeared {count} times)")
+
+        # # **Visualize a Sample Decision Tree**
+        # random_forests_paths.visualize_decision_tree(model, X.columns, max_depth=3)
 
 
-# print("\n--- Most Common Multi-Feature Pathways ---")
-# common_combinations = random_forests_paths.extract_feature_combinations(model, X.columns)
-# for features, count in common_combinations.items():
-#     print(f"{features} (Appeared {count} times)")
 
-# # **Visualize a Sample Decision Tree**
-# random_forests_paths.visualize_decision_tree(model, X.columns, max_depth=3)
+    elif method == 'FPgrowth':
+        run_FP(df)
+
+    elif method == "deap":
+        
+        os.makedirs("./deap-results", exist_ok=True)
+        # for col in df.columns:
+        #     print(col)
+
+        # print(df[(df['guidelines_support'] == 0) & (df['guidelines_not_support'] == 0)])
+        df['soc_absent'] = ((df['soc_support'] == 0) & (df['soc_not_support'] == 0)).astype(int)
+        df['guidelines_absent'] = ((df['guidelines_support'] == 0) & (df['guidelines_not_support'] == 0)).astype(int)
+        run_deap(df, "./deap-results/" + result_file_name)
