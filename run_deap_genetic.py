@@ -1,7 +1,7 @@
 import random
 import pandas as pd
 from deap import base, creator, tools, algorithms
-from sklearn.metrics import mutual_info_score
+import copy
 
 def run_deap(df, filename):
     X = df.drop(columns=['is_denial_upheld'])    
@@ -189,6 +189,25 @@ def run_deap(df, filename):
             ind.fitness.values = fit
         return population
     
+    def selective_tournament(individuals, k, tournsize, fitness_threshold=0.5):
+        chosen = []
+        for _ in range(k):
+            # Keep sampling tournaments until we find one with at least one fit individual
+            max_attempts = 5  # Limit attempts to prevent infinite loop
+            for _ in range(max_attempts):
+                aspirants = tools.selRandom(individuals, k=tournsize)
+                # Check if any individuals meet our fitness threshold
+                fit_aspirants = [ind for ind in aspirants if ind.fitness.values[0] > fitness_threshold]
+                if fit_aspirants:
+                    # If we found fit individuals, select the best one
+                    chosen.append(max(fit_aspirants, key=lambda ind: ind.fitness.values[0]))
+                    print('fitval = ', max(aspirants, key=lambda ind: ind.fitness.values[0]).fitness.values[0])
+                    break
+            else:
+                # If we didn't find any fit individuals after max_attempts, take best from last tournament
+                chosen.append(max(aspirants, key=lambda ind: ind.fitness.values[0]))
+        return chosen
+    
     # Evolutionary Process
     toolbox = base.Toolbox()
     toolbox.register("individual", generate_individual)
@@ -196,8 +215,8 @@ def run_deap(df, filename):
     toolbox.register("evaluate", evaluate)
     toolbox.register("mate", crossover_addone)
     toolbox.register("mutate", mutate)
-    toolbox.register("select", tools.selTournament, tournsize=random.randint(2, 4))
-
+    # toolbox.register("select", tools.selTournament, tournsize=random.randint(2, 4))
+    toolbox.register("select", selective_tournament, tournsize=3)
 
     # Run Evolution
     population = toolbox.population()
@@ -206,16 +225,17 @@ def run_deap(df, filename):
     best_fitness = []
 
     for gen in range(NUM_GENERATIONS):
+        ELITE_SIZE = 50  # Increase from 20
 
         offspring = algorithms.varAnd(population, toolbox, CROSSOVER_RATE, MUTATION_RATE)
         offspring = score_pop(offspring, toolbox)
 
         # First select based on fitness
-        best_offspring = toolbox.select(offspring, k=len(population)-20)
+        best_offspring = toolbox.select(offspring, k=len(population)-ELITE_SIZE)
 
         # Keep the top 20 elite individuals
-        top_20_individuals = sorted(population, key=lambda ind: ind.fitness.values[0], reverse=True)[:20]
-        new_population = top_20_individuals + make_unique_population(best_offspring, k=len(population)-20)
+        top_elite_individuals = sorted(population, key=lambda ind: ind.fitness.values[0], reverse=True)[:ELITE_SIZE]
+        new_population = top_elite_individuals + make_unique_population(best_offspring, k=len(population)-ELITE_SIZE)
         # Then ensure diversity
         population = make_unique_population(new_population, k=len(population))
 
