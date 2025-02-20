@@ -10,6 +10,7 @@ input_csv = "data\ca-imr-determinations.csv"
 start_record = 0  # Start from first record
 max_records = 37000  # Process limit of records
 # chunk_size = 4    # Process in chunks of 4
+method = "deap" #Feature importance methodology #random_forest/FPgrowth/deap
 
 #Define query
 query = IMRQuery(
@@ -24,8 +25,5 @@ gen_cache(input_csv, query, start_record, max_records)
 #Nomalize results
 store_normalized_appeals(query)
 
-
-#Feature importance methodology
-method = "deap" #random_forest/FPgrowth/deap
-
+#Get feature importances
 predict(query, method) # Provide parameter result_file_name: str, when using deap to name results file
