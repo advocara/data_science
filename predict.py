@@ -89,7 +89,7 @@ def train_random_forest(X, y):
     return clf, X_train, X_test, y_train, y_test
 
 
-def predict(query: IMRQuery, method: str, result_file_name: str = 'deap_results_support_absent_elitism_new.csv'):
+def predict(query: IMRQuery, method: str, result_file_name: str = 'deap_results_support_absent_elitism_selecttourn.csv'):
     # Load JSON files from cache directory
     medical_appeals = []
     normalized_appeal_dir = os.getcwd()+"/appeals-results"
@@ -158,4 +158,4 @@ def predict(query: IMRQuery, method: str, result_file_name: str = 'deap_results_
         # print(df[(df['guidelines_support'] == 0) & (df['guidelines_not_support'] == 0)])
         df['soc_absent'] = ((df['soc_support'] == 0) & (df['soc_not_support'] == 0)).astype(int)
         df['guidelines_absent'] = ((df['guidelines_support'] == 0) & (df['guidelines_not_support'] == 0)).astype(int)
-        run_deap(df, "/deap-results/" + result_file_name)
+        run_deap(df, "./deap-results/" + result_file_name)
