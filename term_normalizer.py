@@ -7,6 +7,7 @@ from openai import OpenAI
 from openai.types.chat.completion_create_params import ResponseFormat
 from pydantic import BaseModel, Field, field_validator
 
+from imr_analyzer import IMRAnalyzer, IMRQuery
 from model.appeal import MedicalInsuranceAppeal
 from util import get_openai_client, load_openai_key
 
@@ -133,17 +134,20 @@ class Normalizer:
             appeal.complications = [complication_map.get(c) for c in appeal.complications]
     
 
-def store_normalized_appeals(category_substring: str) -> None:
+def store_normalized_appeals(query: IMRQuery) -> None:
     """
     Read appeals from cache, normalize names, and store in appeals-results directory.
     
     Args:
-        category_substring: String to match in cache filenames (e.g., 'Immuno Disorders-Lupus' for lupus appeals)
+        query: IMRQuery object containing diagnosis category and subcategory to match in cache filenames
+              (e.g., IMRQuery with diagnosis_category='Immuno Disorders' and diagnosis_subcategory='Lupus')
     """
     # Setup paths and create output directory
     cache_dir = './cache'
     results_dir = './appeals-results'
     os.makedirs(results_dir, exist_ok=True)
+
+    category_substring = f'{query.diagnosis_category}-{query.diagnosis_subcategory}'
     
     # Check if files already exist
     existing_files = [f for f in os.listdir(results_dir) 
