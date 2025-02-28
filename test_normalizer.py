@@ -1,6 +1,6 @@
 import unittest
 from typing import List, Set
-from results.model.appeal import MedicalInsuranceAppeal, Treatment
+from model.appeal import MedicalInsuranceAppeal, Treatment
 from term_normalizer import Normalizer
 
 class TestNormalizer(unittest.TestCase):

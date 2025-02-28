@@ -1,0 +1,56 @@
+{
+  "case_id": "EI21-35509",
+  "year": 2021,
+  "patient_info": {
+    "age_range": "51 to 64",
+    "gender": "Female"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "memory disturbance"
+  ],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "Genetic/Genomic Test",
+  "treatments_requested": [
+    {
+      "name": "Laboratory Testing",
+      "drug_type": null,
+      "procedure_type": "diagnostic",
+      "is_procedure": true,
+      "other_or_notes": "Experimental/Investigational"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": true,
+  "issues_considered": [
+    "medical_necessity",
+    "diagnosis",
+    "plan_coverage"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": false,
+  "soc_not_support": true,
+  "soc_details": "The laboratory testing was not likely to be more beneficial than standard therapy for evaluation of the patient's condition.",
+  "study_support": true,
+  "study_details": [
+    {
+      "study_name": "Blennow and colleagues",
+      "study_authors": "Blennow et al.",
+      "key_findings": "Biomarkers contribute diagnostically relevant information, but further validation is needed."
+    }
+  ],
+  "key_questions": [
+    "medical_necessity",
+    "confirm_diagnosis"
+  ],
+  "expedited": false,
+  "rationale": "The laboratory testing provided by Athena Diagnostics, Inc. was not likely to have been more beneficial for evaluation of the patient\u2019s condition than any available standard therapy. Diagnosis of cognitive disorders remains based on clinical evaluations including a patient\u2019s history and neuropsychological studies.",
+  "reviewer_credentials": "Physician reviewers 1 and 3 are board certified in neurology. Physician reviewer 2 is board certified in neurology with sub-specialty certification in vascular neurology."
+}

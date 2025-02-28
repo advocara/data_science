@@ -1,0 +1,50 @@
+{
+  "case_id": "EI16-21961",
+  "year": 2016,
+  "patient_info": {
+    "age_range": "41 to 50",
+    "gender": "Male"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "cognitive impairment",
+    "cognitive impairment"
+  ],
+  "treatment_category": "Diag Imag & Screen",
+  "treatment_subcategory": "PET Scan",
+  "treatments_requested": [
+    {
+      "name": "PET Scan",
+      "drug_type": null,
+      "procedure_type": "imaging",
+      "is_procedure": true,
+      "other_or_notes": "Requested for evaluation of medical condition"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity",
+    "diagnosis"
+  ],
+  "other_issues": null,
+  "guidelines_support": null,
+  "guidelines_not_support": null,
+  "guidelines_details": null,
+  "soc_support": null,
+  "soc_not_support": null,
+  "soc_details": null,
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity",
+    "confirm_diagnosis"
+  ],
+  "expedited": false,
+  "rationale": "The PET scan was deemed necessary to differentiate between front temporal dementia, Alzheimer's disease, and a personality disorder, given the patient's young age and lack of other diagnostic abnormalities. The scan was considered more beneficial than standard therapies for accurate diagnosis and treatment planning.",
+  "reviewer_credentials": "All three physician reviewers are board certified in neurology, actively practicing, and experts in the treatment of the enrollee\u2019s medical condition."
+}

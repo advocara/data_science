@@ -9,21 +9,12 @@ import openai
 from openai import OpenAI
 
 from cache import FileCache  # Update import
-from results.model.appeal import GenderType, IMRRow, MedicalInsuranceAppeal, PatientInfo
+from model.appeal import GenderType, IMRRow, MedicalInsuranceAppeal, PatientInfo
+from model.config import IMRConfig, IMRQuery
 from util import get_openai_client, load_openai_key
 
 MAX_CASES = 20
 CHUNK_SIZE = 4
-
-@dataclass
-class IMRQuery:
-    """Class to hold query parameters for filtering IMR cases"""
-    diagnosis_category: Optional[str] = None
-    diagnosis_subcategory: Optional[str] = None
-    determination: Optional[str] = None
-    treatment_category: Optional[str] = None
-    treatment_subcategory: Optional[str] = None
-    year: Optional[int] = None
 
 class IMRAnalyzer:
     def __init__(self, csv_path: str, openai_api_key: Optional[str]):
@@ -60,9 +51,9 @@ class IMRAnalyzer:
                 reference_id=row['ReferenceID'],
                 report_year=row['ReportYear'],
                 diagnosis_category=row['DiagnosisCategory'],
-                diagnosis_sub_category=row['DiagnosisSubCategory'],
+                diagnosis_sub_category=row['DiagnosisCategory']+'-'+row['DiagnosisSubCategory'],
                 treatment_category=row['TreatmentCategory'],
-                treatment_sub_category=row['TreatmentSubCategory'],
+                treatment_sub_category=row['TreatmentCategory']+'-'+row['TreatmentSubCategory'],
                 determination=row['Determination'],
                 type=row['Type'],
                 age_range=row['AgeRange'],
@@ -76,11 +67,11 @@ class IMRAnalyzer:
         
         return imr_rows
 
-    def extract_appeal(self, imr: IMRRow, instructions: str, dataset_name: str) -> MedicalInsuranceAppeal:
+    def extract_appeal(self, imr: IMRRow, instructions: str, config: IMRConfig, record_id: str) -> MedicalInsuranceAppeal:
         """Extract themes from a group of cases using OpenAI's GPT-4"""
         # Check cache first
         full_text = imr.to_string()
-        cached_result = self.cache.get(full_text, dataset_name)
+        cached_result = self.cache.get(full_text, config, record_id)
         if cached_result:
             try:
                 print(f"Cache hit for {full_text[:200]}")
@@ -121,13 +112,13 @@ class IMRAnalyzer:
             and imr.age_range != "Not Applicable"
         ) else "Unknown"
         mia.patient_info = PatientInfo(age_range=age_range, gender=gender)
-        mia.diagnosis = imr.diagnosis_category
+        mia.diagnosis = imr.diagnosis_category + " - " + imr.diagnosis_sub_category
         mia.treatment_category = imr.treatment_category
         mia.treatment_subcategory = imr.treatment_sub_category
 
         assert isinstance(mia, MedicalInsuranceAppeal)
         # Cache the successful result as the object JSON form
-        self.cache.put(full_text, mia.model_dump_json(), dataset_name)
+        self.cache.put(full_text, mia.model_dump_json(), config, mia.case_id)
 
         print(f"Extracted and cached case {mia.case_id}")
 

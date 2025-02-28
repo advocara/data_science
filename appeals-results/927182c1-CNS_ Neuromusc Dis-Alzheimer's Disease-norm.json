@@ -1,0 +1,48 @@
+{
+  "case_id": "MN15-20792",
+  "year": 2015,
+  "patient_info": {
+    "age_range": "65+",
+    "gender": "Male"
+  },
+  "diagnosis": "CNS/ Neuromusc Dis",
+  "secondary_conditions": [],
+  "complications": [],
+  "symptoms": [
+    "altered mental status",
+    "altered mental status"
+  ],
+  "treatment_category": "Mental Health",
+  "treatment_subcategory": "Acute Psych/ Admit",
+  "treatments_requested": [
+    {
+      "name": "Psychiatric Inpatient Services",
+      "drug_type": null,
+      "procedure_type": "psychotherapy",
+      "is_procedure": true,
+      "other_or_notes": "Treatment for altered mental status and agitation in Alzheimer's Disease"
+    }
+  ],
+  "treatments_tried_but_failed": [],
+  "treatments_tried_and_worked": [],
+  "treatments_not_tried": [],
+  "is_denial_upheld": false,
+  "issues_considered": [
+    "medical_necessity"
+  ],
+  "other_issues": null,
+  "guidelines_support": true,
+  "guidelines_not_support": false,
+  "guidelines_details": "The services at issue were medically necessary for treatment of the patient\u2019s medical condition.",
+  "soc_support": true,
+  "soc_not_support": false,
+  "soc_details": "The clinical care and treatment setting were safe, appropriate, and consistent with good medical practice.",
+  "study_support": null,
+  "study_details": [],
+  "key_questions": [
+    "medical_necessity"
+  ],
+  "expedited": false,
+  "rationale": "The services at issue were medically necessary for treatment of the patient\u2019s medical condition. The patient required specialized care that could not be provided by non-health care professionals. The inpatient treatment was necessary to manage the patient's condition and prevent a more serious episode of illness.",
+  "reviewer_credentials": "Board certified in psychiatry, actively practicing, expert in treatment of Alzheimer's Disease."
+}

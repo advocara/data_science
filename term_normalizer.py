@@ -7,7 +7,8 @@ from openai import OpenAI
 from openai.types.chat.completion_create_params import ResponseFormat
 from pydantic import BaseModel, Field, field_validator
 
-from results.model.appeal import MedicalInsuranceAppeal
+from imr_analyzer import IMRAnalyzer, IMRQuery
+from model.appeal import MedicalInsuranceAppeal
 from util import get_openai_client, load_openai_key
 
 class TermMappingSet(BaseModel):
@@ -92,7 +93,9 @@ class Normalizer:
         all_conditions = set()
         all_symptoms = set()
         all_complications = set()
+        all_study_names = set()
 
+        # Collect all unique feature values from all appeals
         for appeal in appeals:
             # Collect treatments across all appeals
             for t in appeal.treatments_requested:
@@ -109,12 +112,15 @@ class Normalizer:
             all_symptoms.update(appeal.symptoms)
             all_complications.update(appeal.complications)
 
+            for study in appeal.study_details:
+                all_study_names.add(study.study_name)
 
         # Get mappings
         treatment_map = self.get_normalized_mapping(all_treatments, "treatments")
         condition_map = self.get_normalized_mapping(all_conditions, "conditions")
         symptom_map = self.get_normalized_mapping(all_symptoms, "symptoms")
         complication_map = self.get_normalized_mapping(all_complications, "complications")
+        study_name_map = self.get_normalized_mapping(all_study_names, "study names")
 
         # Apply normalizations: replace the name of each treatment, condition, symptom, and complication with the normalized version
         for appeal in appeals:
@@ -127,23 +133,30 @@ class Normalizer:
                 t.name = treatment_map.get(t.name)
             for t in appeal.treatments_not_tried:
                 t.name = treatment_map.get(t.name)
-            # now the other
+            for study in appeal.study_details:
+                study.study_name = study_name_map.get(study.study_name)     
+        
+            # now the other fields
             appeal.secondary_conditions = [condition_map.get(c) for c in appeal.secondary_conditions]
             appeal.symptoms = [symptom_map.get(s) for s in appeal.symptoms]
             appeal.complications = [complication_map.get(c) for c in appeal.complications]
+
     
 
-def store_normalized_appeals(category_substring: str) -> None:
+def store_normalized_appeals(query: IMRQuery) -> None:
     """
     Read appeals from cache, normalize names, and store in appeals-results directory.
     
     Args:
-        category_substring: String to match in cache filenames (e.g., 'Immuno Disorders_Lupus' for lupus appeals)
+        query: IMRQuery object containing diagnosis category and subcategory to match in cache filenames
+              (e.g., IMRQuery with diagnosis_category='Immuno Disorders' and diagnosis_subcategory='Lupus')
     """
     # Setup paths and create output directory
     cache_dir = './cache'
     results_dir = './appeals-results'
     os.makedirs(results_dir, exist_ok=True)
+
+    category_substring = f'{query.diagnosis_category}-{query.diagnosis_subcategory}'
     
     # Check if files already exist
     existing_files = [f for f in os.listdir(results_dir) 
