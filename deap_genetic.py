@@ -226,20 +226,36 @@ def run_deap(df, filename):
         print(f"Generation {gen}: Best Fitness = {best_fitness[-1]:.4f}----------------------------average of top 10 gen fits = {sum(top_10)/len(top_10):.4f}")
         print()
 
+    def shorten_feature_name(feature_name: str) -> str:
+        """Shorten feature names for better readability in CSV output."""
+        replacements = {
+            'treatment_': 'trt_',
+            'tried_but_failed': 'tried',
+            'tried_and_worked': 'worked',
+            'not_tried': 'not_tried',
+            'requested': 'req',
+            'guidelines_': 'guide_',
+            'standards_of_care': 'soc',
+        }
+        shortened = feature_name
+        for old, new in replacements.items():
+            shortened = shortened.replace(old, new)
+        return shortened
+
     def analyze_results(population):
-    # Sort by fitness
+        # Sort by fitness
         top_tuples = sorted(population, key=lambda ind: ind.fitness.values[0], reverse=True)
         
         # Create DataFrame with separate columns for features and fitness
         results = []
         for ind in top_tuples:
+            # Shorten feature names before joining
+            shortened_features = [shorten_feature_name(f) for f in ind]
             results.append({
-                'Features': ', '.join(ind),
+                'Features': ', '.join(shortened_features),
                 'Feature Count': len(ind),
                 'Fitness Score': ind.fitness.values[0],
-                'upheld_precision': ind.fitness.values[1],
                 'upheld_count': ind.fitness.values[2],
-                'overturned_precision': ind.fitness.values[3],
                 'overturned_count': ind.fitness.values[4],
                 'total_matches_of_this_set': ind.fitness.values[5]
             })

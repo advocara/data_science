@@ -7,7 +7,7 @@ from model.appeal import MedicalInsuranceAppeal
 
 import pandas as pd
 
-def flatten_appeals_to_dataframe(appeals: List[MedicalInsuranceAppeal]) -> pd.DataFrame:
+def flatten_appeals_to_dataframe_OBSOLETE(appeals: List[MedicalInsuranceAppeal]) -> pd.DataFrame:
     # First collect all unique values for one-hot encoding
     unique_values = {
         'secondary_conditions': set(),
